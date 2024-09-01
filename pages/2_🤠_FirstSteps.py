@@ -19,3 +19,27 @@ st.write(
     
     """
 )
+
+st.divider()
+
+st.header("Setting up your project Google Drive folders")
+
+st.write(
+    """
+    To start your project, you will need to create a folder structure in your Google Drive.
+    
+    The required folder structure is the following:
+    """
+)
+
+st.markdown(
+     """
+Shared drive
+└── AdmonPsy - PROJECT NAME
+    └── Experiment
+        └── Data
+            ├── Metadata
+            └── Processed Data
+            U+2514── Raw Data
+"""
+)

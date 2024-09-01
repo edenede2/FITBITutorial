@@ -36,9 +36,10 @@ folder_structure = """
 Shared drive
 └── AdmonPsy - PROJECT NAME
     └── Experiment
-        └── Data
-            ├── Metadata
-            └── Processed Data
+        ├── Data
+        │   └── Metadata
+        └── Processed Data
+            
 """
 
 st.markdown(f"```text\n{folder_structure}\n```")

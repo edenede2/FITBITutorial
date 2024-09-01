@@ -32,14 +32,14 @@ st.write(
     """
 )
 
-st.markdown(
-     """
+folder_structure = """
 Shared drive
 └── AdmonPsy - PROJECT NAME
     └── Experiment
         └── Data
             ├── Metadata
             └── Processed Data
-            U+2514── Raw Data
+            └── Raw Data
 """
-)
+
+st.markdown(f"```text\n{folder_structure}\n```")

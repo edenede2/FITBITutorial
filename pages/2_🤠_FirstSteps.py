@@ -36,9 +36,9 @@ folder_structure = """
 Shared drive
 └── AdmonPsy - PROJECT NAME
     └── Experiment
-        ├── Data
-        │   └── Metadata
-        └── Processed Data
+        ├── Processed Data 
+        └── Data
+            └── Metadata
             
 """
 

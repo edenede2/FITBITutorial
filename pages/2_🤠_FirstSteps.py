@@ -45,5 +45,5 @@ Shared drive
 st.markdown(f"```text\n{folder_structure}\n```")
 
 st.image(
-    r'Screenshot 2024-09-01 094511.png'
+    r'pages/Screenshot 2024-09-01 094511.png'
 )

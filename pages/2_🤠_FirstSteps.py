@@ -44,3 +44,6 @@ Shared drive
 
 st.markdown(f"```text\n{folder_structure}\n```")
 
+st.image(
+    'assets\Screenshot 2024-09-01 094511.png'
+)

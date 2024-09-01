@@ -39,7 +39,6 @@ Shared drive
         └── Data
             ├── Metadata
             └── Processed Data
-            └── Raw Data
 """
 
 st.markdown(f"```text\n{folder_structure}\n```")

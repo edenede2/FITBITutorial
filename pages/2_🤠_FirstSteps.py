@@ -73,7 +73,7 @@ st.write(
     To create a new `Data` folder in Google Drive, follow these steps:
     
     1. Open your Google Drive.
-    2. Navigate to the `AdmonPsy - PROJECT NAME` folder.
+    2. Navigate to the `AdmonPsy - PROJECT NAME` folder, make sure that the progremmer have access to the drive folder.
     3. Create a new folder named `Experiment`.
     4. Inside the `Experiment` folder, create a new folder named `Data`.
     5. Upload the raw data files from the FitBit devices to the `Data` folder.

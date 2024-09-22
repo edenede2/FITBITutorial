@@ -62,17 +62,17 @@ Data
 st.markdown(f"```text\n{subject_data_structure}\n```")
 
 st.image(
-    r'pages\Screenshot 2024-09-22 161020.png'
+    r'pages/Screenshot 2024-09-22 161020.png'
 )
 st.divider()
 
 st.image(
-    r'pages\Screenshot 2024-09-22 161036.png'
+    r'pages/Screenshot 2024-09-22 161036.png'
 )
 st.divider()
 
 st.image(
-    r'pages\Screenshot 2024-09-22 161102.png'
+    r'pages/Screenshot 2024-09-22 161102.png'
 )
 st.divider()
 

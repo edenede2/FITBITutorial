@@ -1,0 +1,105 @@
+import streamlit as st
+
+st.title("Extract sleep data")
+
+
+st.divider()
+
+st.write(
+    """
+    In this section, we will guide you through the process of extracting your sleep data from the raw fitbit sleep data.
+
+    We will cover the following topics:
+    1. Extract sleep data for all subjects.
+    2. Review the extracted data files.
+    """
+)
+
+st.divider()
+
+st.header("Instructions")
+
+st.write(
+    """
+    1. Open the app.
+    """
+)
+
+st.image(
+    "pages/Screenshot 2024-10-11 200217.png"
+)
+
+st.write(
+    """
+    2. Click on the 'extract sleep data' tab.
+    """
+)
+
+st.image(
+    "pages/Screenshot 2024-10-11 212033.png"
+)
+
+st.write(
+    """
+    3. Load your project by selecting the project and clicking on the 'Load' button.
+    """
+)
+
+st.image(
+    "pages/Screenshot 2024-10-11 212101.png"
+)
+
+st.write(
+    """
+    4. Review the table to ensure that each subject has a reasonable number of sleep records (e.g., at least 1 or 2 for a single month but more the 2 are reasonable too).
+    """
+)
+
+st.image(
+    "pages/Screenshot 2024-10-11 212134.png"
+)
+
+st.write(
+    """
+    5. You can now select the subjects for which you want to exclude by disabling the checkbox in the 'run' column.
+    6. Click on the 'Generate Sleep All Subjects' button to extract the sleep data for all subjects.
+    """
+)
+
+st.image(
+    "pages/Screenshot 2024-10-11 212149.png"
+)
+
+st.write(
+    """
+    7. After the process starts, you will see a black window that shows the progress of the process.
+    8. 9 Files will be generated for all the subjects that you selected:
+        - Sleep All Subjects.csv
+        - Sleep Daily Details Exclude Thursday and Friday.csv
+        - Sleep Daily Summary Exclude Thursday and Friday.csv
+        - Sleep Daily Details Exclude Thursday.csv
+        - Sleep Daily Summary Exclude Thursday.csv
+        - Sleep Daily Details Exclude Friday.csv
+        - Sleep Daily Summary Exclude Friday.csv
+        - Sleep Daily Details Full Week.csv
+        - Sleep Daily Summary Full Week.csv
+    """
+)
+
+st.image(
+    "pages/Screenshot 2024-10-11 212204.png"
+)
+
+st.write(
+    """
+    9. When the process is finished, the black window will close, and you will see the message that the process is finished.
+    """
+)
+
+st.write(
+    """
+    10. You finished the process of extracting the sleep data. Now you can move to the next step.
+    """
+)
+
+st.divider()

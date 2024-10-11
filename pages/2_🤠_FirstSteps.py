@@ -110,12 +110,12 @@ st.markdown(
     """
 1. Open your browser (Chrome, Firefox, etc.) and go to https://takeout.google.com/
 2. Sign in with your fitbit google account.
-3. Click on "Deselect all" (or "תויורשפאה לכב הריחבה לוטיב").
+3. Click on "Deselect all".
 """
 )
 
 st.image(
-    r'Screenshot 2024-10-11 184452.png'
+    r'pages/Screenshot 2024-10-11 184452.png'
 )
 
 
@@ -126,7 +126,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 184653.png'
+    r'pages/Screenshot 2024-10-11 184653.png'
 )
 
 st.markdown(
@@ -136,7 +136,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 184747.png'
+    r'pages/Screenshot 2024-10-11 184747.png'
 )
 
 st.markdown(
@@ -146,7 +146,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 185010.png'
+    r'pages/Screenshot 2024-10-11 185010.png'
 )
 
 st.markdown(
@@ -161,7 +161,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 190037.png'
+    r'pages/Screenshot 2024-10-11 190037.png'
 )
 
 st.markdown(
@@ -173,7 +173,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 190230.png'
+    r'pages/Screenshot 2024-10-11 190230.png'
 )
 
 
@@ -184,7 +184,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 190522.png'
+    r'pages/Screenshot 2024-10-11 190522.png'
 )
 
 
@@ -195,7 +195,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 190615.png'
+    r'pages/Screenshot 2024-10-11 190615.png'
 )
 
 st.markdown(
@@ -205,7 +205,7 @@ st.markdown(
 )
 
 st.image(
-    r'Screenshot 2024-10-11 190643.png'
+    r'pages/Screenshot 2024-10-11 190643.png'
 )
 
 st.markdown(

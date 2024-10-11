@@ -82,7 +82,24 @@ st.divider()
 st.title("2. Creating a new Data folder in Google Drive")
 
 
+st.header("The Data folder")
 
+st.write(
+    """
+    The `Data` folder will contain the raw data files from the FitBit devices.
+
+    In the set up step, the script will read the raw data files from the `Data` folder filter the necessary files by the name of the files and move them to the `Data` folder in the 'Processed Data' folder.
+
+    """
+)
+
+st.markdown(
+    """
+    :red[Note:]
+    * The names of the files and folders that we will create in the steps below need to be exactly as written in the instructions.
+    * The names of the files and folders are case-sensitive.
+    """
+)
 
 st.write(
     """

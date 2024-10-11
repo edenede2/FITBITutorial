@@ -36,7 +36,7 @@ st.write(
 )
 
 st.image(
-    "pages/Screenshot 2024-10-11 212033.png"
+    "pages/Screenshot 2024-10-11 214608.png"
 )
 
 st.write(
@@ -46,7 +46,7 @@ st.write(
 )
 
 st.image(
-    "pages/Screenshot 2024-10-11 212101.png"
+    "pages/Screenshot 2024-10-11 214927.png"
 )
 
 st.write(
@@ -56,7 +56,7 @@ st.write(
 )
 
 st.image(
-    "pages/Screenshot 2024-10-11 212134.png"
+    "pages/Screenshot 2024-10-11 215857.png"
 )
 
 st.write(
@@ -67,7 +67,7 @@ st.write(
 )
 
 st.image(
-    "pages/Screenshot 2024-10-11 212149.png"
+    "pages/Screenshot 2024-10-11 215148.png"
 )
 
 st.write(
@@ -87,17 +87,12 @@ st.write(
 )
 
 st.image(
-    "pages/Screenshot 2024-10-11 212204.png"
+    "pages/Screenshot 2024-10-11 215234.png"
 )
 
 st.write(
     """
     9. When the process is finished, the black window will close, and you will see the message that the process is finished.
-    """
-)
-
-st.write(
-    """
     10. You finished the process of extracting the sleep data. Now you can move to the next step.
     """
 )

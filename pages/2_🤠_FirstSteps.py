@@ -63,11 +63,15 @@ st.image(
 
 st.write(
     """
-    The `Data` folder will contain the raw data files from the FitBit devices.
+    The `AdmonPsy - PROJECT NAME` folder is the main folder for your project (PROJECT NAME = the namo of your project).
+
+    The `Experiment` folder is the code "environment" for your project. It will contain the following subfolders:
+
+        The `Data` folder will contain the raw data files from the FitBit devices (more details in section 2).
     
-    The `Processed Data` folder will contain the processed data files (after runing the scripts int the next stages).
+        The `Processed Data` folder will contain the processed data files (after runing the scripts int the next stages).
     
-    The `Metadata` folder will contain the metadata about the subjects of the experiment (detailed in the next section).
+        The `Metadata` folder will contain the metadata about the subjects of the experiment (more details in sections 3-4).
         
         """
 
@@ -75,15 +79,21 @@ st.write(
 
 st.divider()
 
-st.header("2. Creating a new Data folder in Google Drive")
+st.title("2. Creating a new Data folder in Google Drive")
+
+
+
 
 st.write(
     """
-    The `Data` folder will contain the raw data files from the FitBit devices.
+    Open your 'Experiment' folder from your Google Drive folder.
+
+    Now open the 'Data' folder and follow the instructions:
+
     
     To create a new `Data` folder in Google Drive, follow these steps:
     
-    1. Open your Google Drive.
+    1. Open your Google Drive folder.
     2. Navigate to the `AdmonPsy - PROJECT NAME` folder, make sure that the progremmer have access to the drive folder.
     3. Create a new folder named `Experiment`.
     4. Inside the `Experiment` folder, create a new folder named `Data`.

@@ -98,26 +98,145 @@ note_container.markdown(
     """
     :red[Note:]
     * The names of the files and folders that we will create in the steps below need to be **exactly** as written in the instructions.
-    * The names of the files and folders are case-sensitive.
+    * The names of the files and folders are **case-sensitive**.
     """
 )
 
-st.write(
+st.header("Instructions for google account")
+
+st.subheader("If your subject has a google account with the form of {subject name}@gmail.com")
+
+st.markdown(
     """
-    Open your 'Experiment' folder from your Google Drive folder.
+1. Open your browser (Chrome, Firefox, etc.) and go to https://takeout.google.com/
+2. Sign in with your fitbit google account.
+3. Click on "Deselect all" (or "תויורשפאה לכב הריחבה לוטיב").
+"""
+)
 
-    Now open the 'Data' folder and follow the instructions:
+st.image(
+    r'Screenshot 2024-10-11 184452.png'
+)
 
-    
-    To create a new `Data` folder in Google Drive, follow these steps:
-    
-    1. Open your Google Drive folder.
-    2. Navigate to the `AdmonPsy - PROJECT NAME` folder, make sure that the progremmer have access to the drive folder.
-    3. Create a new folder named `Experiment`.
-    4. Inside the `Experiment` folder, create a new folder named `Data`.
-    5. Upload the raw data files from the FitBit devices to the `Data` folder.
+
+st.markdown(
+    """
+4. Scroll down and select "Fitbit".
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 184653.png'
+)
+
+st.markdown(
+    """
+5. Click on "Next step".
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 184747.png'
+)
+
+st.markdown(
+    """
+6. Select the file destination to google drive (i.e. add to drive).
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 185010.png'
+)
+
+st.markdown(
+    """
+7. Select the frequency of the export (i.e. every 2 months or one time).
+8. Select the file type to ".zip".
+9. Click on "Create export" (i.e. sometimes you would be required to enter your google password again).
+10. Wait for the export to be ready.
+11. Go to your google drive and find the file that you just exported under the name "takeout-{some long number}.zip" and download it. 
+    :red[Note:] The file will be on the root of your google drive and sometimes in one export there would be mre then one zip file, its important to download all of them.
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 190037.png'
+)
+
+st.markdown(
+    """
+12. Go back to your google drive and open the "Experiment" folder.
+13. Create a new folder called "Data" (case sensitive) if it doesn't exist.
+14. Open the "Data" folder and create a new folder with the name of your subject. The name should be "{subject group}_{subject number as 3 digit number}" (e.g. "sub_000" or "C_019").
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 190230.png'
+)
+
+
+st.markdown(
+    """
+15. Open the folder you just created and upload the zip file that you downloaded in step 11.
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 190522.png'
+)
+
+
+st.markdown(
+    """
+16. Right click on the zip file and select "Extract here".
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 190615.png'
+)
+
+st.markdown(
+    """
+17. Delete the zip file.
+"""
+)
+
+st.image(
+    r'Screenshot 2024-10-11 190643.png'
+)
+
+st.markdown(
+    """
+18. You are done! 🎉
     """
 )
+
+
+st.header("Instructions for fitbit account")
+
+st.subheader("If your subject has a fitbit account with the form of {subject name}@labs.hevra.haifa.ac.il")
+
+st.markdown(
+    """
+1. Open your browser (Chrome, Firefox, etc.) and go to https://fitbit.com/settings and sign in with your fitbit account.
+2. Click on "Data Export".
+3. Click on "Request Data".
+4. Sometimes you would be required to confirm your email address after clicking on "Request Data".
+5. Wait for the 'Download' button to be available. You can refresh the progress with the refresh button to see the progress.
+6. Click on "Download".
+7. Go to your project's google drive and open the "Experiment" folder.
+8. Create a new folder called "Data" (case sensitive) if it doesn't exist.
+9. Open the "Data" folder and create a new folder with the name of your subject. The name should be "{subject group}_{subject number as 3 digit number}" (e.g. "sub_000" or "C_019").
+10. Open the folder you just created and upload the zip file that you downloaded in step 6.
+11. Right click on the zip file and select "Extract here".
+12. Delete the zip file.
+13. You are done! 🎉
+    """
+)
+
 
 st.image(
     r'pages/Screenshot (3).png'

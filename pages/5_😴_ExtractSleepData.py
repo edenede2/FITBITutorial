@@ -56,7 +56,7 @@ st.write(
 )
 
 st.image(
-    "pages/Screenshot 2024-10-11 215857.png"
+    "pages/Screenshot 2024-10-11 214857.png"
 )
 
 st.write(

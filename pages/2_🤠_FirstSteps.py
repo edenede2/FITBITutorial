@@ -14,24 +14,28 @@ st.write(
     In this section, we will guide you through the initial steps to set up your project.
 
     We will cover the following topics:
-    - Setting up your project Google Drive folders
-    - Creating a new Subject Dates csv file
-    - Creating not in Israel file
+    1. Setting up your project Google Drive folders.
+    2. Creating a new Data folder in Google Drive.
+    3. Creating a new Subject Dates csv file.
+    4. Creating a new not in Israel file.
+    5. Update your project settings in the app.
     
     """
 )
 
 st.divider()
 
-st.header("Setting up your project Google Drive folders")
+st.header("1. Setting up your project Google Drive folders")
 
 st.write(
     """
-    To start your project, you will need to create a folder structure in your Google Drive.
+    To start your project, you will need to create a specific folder structure in your Google Drive shared folder (i.e. project's folder).
     
-    The required folder structure is the following:
+    Your folder structure should look like this (only at the initial stage):
     """
 )
+
+
 
 folder_structure = """
 Shared drive
@@ -45,18 +49,25 @@ Shared drive
 
 st.markdown(f"```text\n{folder_structure}\n```")
 
+st.write(
+    """
+    For example:
+    """
+)
+
 st.image(
     r'pages/Screenshot 2024-09-01 094511.png'
 )
+
 
 
 st.write(
     """
     The `Data` folder will contain the raw data files from the FitBit devices.
     
-    The `Processed Data` folder will contain the processed data files.
+    The `Processed Data` folder will contain the processed data files (after runing the scripts int the next stages).
     
-    The `Metadata` folder will contain the metadata about the subjects of the experiment.
+    The `Metadata` folder will contain the metadata about the subjects of the experiment (detailed in the next section).
         
         """
 
@@ -64,7 +75,7 @@ st.write(
 
 st.divider()
 
-st.header("Creating a new Data folder in Google Drive")
+st.header("2. Creating a new Data folder in Google Drive")
 
 st.write(
     """
@@ -132,6 +143,8 @@ st.write(
 st.image(
     r'pages/Screenshot (4).png'
 )
+
+
 
 
 

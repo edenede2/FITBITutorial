@@ -93,7 +93,8 @@ st.write(
     """
 )
 
-st.markdown(
+note_container = st.container(border=True)
+note_container.markdown(
     """
     :red[Note:]
     * The names of the files and folders that we will create in the steps below need to be exactly as written in the instructions.

@@ -434,7 +434,7 @@ st.write(
     """
 )
 
-notInIsrael = pd.read_excel("pages/not_in_israel_df.xlsx").head(8)
+notInIsrael = pd.read_excel("pages/not_in_israel_df.xlsx", sheet_name='participants').head(8)
 
 st.write(notInIsrael)
 

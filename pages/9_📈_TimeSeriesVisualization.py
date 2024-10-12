@@ -54,7 +54,7 @@ The time series plots include the following:
 )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 195712.png"
+    r"pages/Screenshot 2024-10-12 195712.png"
 )
 
 st.divider()

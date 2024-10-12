@@ -50,16 +50,7 @@ st.image(
 st.markdown(
     """
 2. Click on the 'Stats Visualization' tab.
-"""
-)
 
-st.image(
-    "pages/Screenshot 2024-10-12 162951.png"
-)
-
-
-st.markdown(
-    """
 3. Select your project from the dropdown menu and click on the 'Load' button.
 """
 )

@@ -24,18 +24,26 @@ st.header("1. What is the 'preprocessing' step?")
 st.markdown(
     """
 The 'preprocessing' step in our pipeline is where 
+
 we clean, transform, and aggregate the heart rate and steps json files
+
 that we have collected from the Fitbit watch in the 'set up' step.
 
 
 It is important to remember that:
+
 - The Heart Rate data is collected every 1 second by the Fitbit watch but sometimes the watch may not be able to collect the data due to various reasons.
 
 - The Steps data is collected every 1 minute by the Fitbit watch.
+
 However, the json files that we have downloaded from the Fitbit website may not be in the expected sample rate and may contain missing values for few minutes.
+
 By fitbit, it is happening due to visualization purposes and to reduce the size of the data.
+
 We found that the missing values occur in the data when the calories value is minimal for the specific day and show a default value.
+
 :red[Note:] The steps jsons that we are downloading from the Fitbit API has :red[no missing values] and in the 'download api' step we are cleaning the json file to include the same values as the json files that we are downloading from the Fitbit website.
+
 To change it, try to involve the programmer to change the code in the Fitbit API to include the missing values in the steps json file.
 
 - Each heart rate json file contains the heart rate data for a specific day.

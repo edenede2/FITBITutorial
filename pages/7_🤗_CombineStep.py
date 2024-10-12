@@ -64,15 +64,8 @@ st.image(
 st.markdown(
     """
 2. Click on the 'Combined File Generation' tab.
-"""
-)
 
-st.image(
-    "pages\Screenshot 2024-10-12 161211.png"
-)
 
-st.markdown(
-    """
 3. Select your project from the dropdown menu and enter your name.
 """
 )

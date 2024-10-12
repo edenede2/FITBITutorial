@@ -93,7 +93,7 @@ st.markdown(
 )
 
 st.image(
-    r"pages/Screenshot 2024-10-12 161941.png"
+    r"pages/Screenshot 2024-10-12 161957.png"
 )
 
 st.markdown(

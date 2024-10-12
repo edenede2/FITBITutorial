@@ -76,7 +76,7 @@ st.markdown(
 )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 195352.png"
+    r"pages/Screenshot 2024-10-12 195352.png"
 )
 
 st.markdown(
@@ -86,7 +86,7 @@ st.markdown(
 )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 195509.png"
+    r"pages/Screenshot 2024-10-12 195509.png"
 )
 
 st.divider()
@@ -103,7 +103,7 @@ You can display or hide the specific time series data by clicking on the legend 
 )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 195816.png"
+    r"pages/Screenshot 2024-10-12 195816.png"
 )
 
 
@@ -117,11 +117,11 @@ You can also zoom in on the plot by selecting the specific area that you want to
 
 
 st.image(
-    r"pages\Screenshot 2024-10-12 195925.png"
+    r"pages/Screenshot 2024-10-12 195925.png"
 )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 200013.png"
+    r"pages/Screenshot 2024-10-12 200013.png"
 )
 
 
@@ -134,7 +134,7 @@ You can also reset the plot by clicking on the 'Reset axes' button in the corner
     )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 200114.png"
+    r"pages/Screenshot 2024-10-12 200114.png"
 )
 
 st.markdown(
@@ -145,7 +145,7 @@ You can also download the plot as a PNG file by clicking on the 'Download plot a
 )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 200200.png"
+    r"pages/Screenshot 2024-10-12 200200.png"
 )
 
 st.markdown(
@@ -156,7 +156,7 @@ You can also isolate the specific time series data by clicking on the legend of 
     )
 
 st.image(
-    r"pages\Screenshot 2024-10-12 200334.png"
+    r"pages/Screenshot 2024-10-12 200334.png"
 )
 
 st.divider()

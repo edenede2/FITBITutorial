@@ -71,7 +71,7 @@ st.markdown(
 )
 
 st.image(
-    r"C:\Users\PsyLab-7084\Documents\GitHub\FITBITutorial\pages\Screenshot 2024-10-12 161327.png"
+    r"Screenshot 2024-10-12 161327.png"
 )
 
 st.markdown(

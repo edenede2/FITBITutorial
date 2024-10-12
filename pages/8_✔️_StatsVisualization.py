@@ -164,3 +164,8 @@ For example, if we see a high percentage of missing sleep data for a specific su
 
 """
 )
+
+st.image(
+    "pages/Screenshot 2024-10-12 191238.png"
+)
+

@@ -17,7 +17,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 st.divider()
 
 features_df = (
-    pl.read_csv(r"pages/features_dict.csv", ignore_errors=True)
+    pl.read_csv(r"pages/features_dict.csv", encoding="utf-8")
 )
 
 # create a session state to store the results dataframe
@@ -85,7 +85,7 @@ if show_results:
     result_df = st.session_state.result_df
 
     st.dataframe(result_df)
-    
+
     for i in range(len(result_df)):
         with st.container(border=True):
             st.subheader(f"Feature: {result_df["Feature"][i]}")

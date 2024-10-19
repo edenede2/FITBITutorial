@@ -20,6 +20,10 @@ features_df = (
     pl.read_csv(r"pages/features_dict.csv", ignore_errors=True)
 )
 
+# create a session state to store the results dataframe
+if "result_df" not in st.session_state:
+    st.session_state.result_df = None
+
 with st.form("search"):
     st.write("Search for a feature")
     text_input = st.text_input("Feature or file name")
@@ -50,13 +54,17 @@ with st.form("search"):
                 )
             )
 
+        
+        st.session_state.result_df = result_df
+
         st.write("Results for ", text_input, type_of, " There is ", len(result_df), " results")
 
         show_results = True
 
 if show_results:
+    result_df = st.session_state.result_df
     for i in range(len(result_df)):
-        with st.container():
+        with st.container(border=True):
             st.header(result_df["Feature"][i])
             st.subheader("Type: " + result_df["Type"][i])
             st.write(result_df["Description"][i])

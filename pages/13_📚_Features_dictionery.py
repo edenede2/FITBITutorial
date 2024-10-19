@@ -39,14 +39,14 @@ with st.form("search"):
             result_df = (
                 features_df
                 .filter(
-                    pl.col("Feature").str.contains(text_input, case_sensitive=False)
+                    pl.col("Feature").str.contains(text_input, strict=False)
                 )
             )
         elif type_of == "File name":
             result_df = (
                 features_df
                 .filter(
-                    pl.col("File").str.contains(text_input, case_sensitive=False)
+                    pl.col("File").str.contains(text_input, strict=False)
                 )
             )
 

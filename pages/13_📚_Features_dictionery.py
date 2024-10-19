@@ -83,6 +83,9 @@ with st.form("search"):
 if show_results:
 
     result_df = st.session_state.result_df
+
+    st.dataframe(result_df)
+    
     for i in range(len(result_df)):
         with st.container(border=True):
             st.subheader(f"Feature: {result_df["Feature"][i]}")

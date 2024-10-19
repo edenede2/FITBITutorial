@@ -1,0 +1,68 @@
+import polars as pl
+import streamlit as st
+
+st.title("Features Dictionery Page")
+
+
+st.divider()
+
+st.header("Introduction")
+
+st.markdown(
+    """
+Here you can search for a specific features (i.e. columns) that you can find in the files and get more information on it.
+"""
+)
+
+st.divider()
+
+features_df = (
+    pl.read_csv("pages\features_dict.csv")
+)
+
+with st.form("search"):
+    st.write("Search for a feature")
+    text_input = st.text_input("Feature or file name")
+    type_of = st.radio(
+        "Search by 👉",
+        key="visibility",
+        options=["Feature name", "File name", "Both"],
+    )
+
+    # Every form must have a submit button.
+    submitted = st.form_submit_button("Submit")
+
+    show_results = False
+
+    if submitted:
+        if type_of == "Feature name":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("Feature").str.contains(text_input, case_sensitive=False)
+                )
+            )
+        elif type_of == "File name":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("File").str.contains(text_input, case_sensitive=False)
+                )
+            )
+
+        st.write("Results for ", text_input, type_of, " There is ", len(result_df), " results")
+
+        show_results = True
+
+if show_results:
+    for i in range(len(result_df)):
+        with st.container():
+            st.header(result_df["Feature"][i])
+            st.subheader("Type: " + result_df["Type"][i])
+            st.write(result_df["Description"][i])
+            st.write("File: ", result_df["File"][i])
+            st.divider()
+            st.write(result_df["Proccess"][i])
+            if result_df["Source Code Line"][i] != None:
+                st.write("Source Code Line: ", result_df["Source Code Line"][i])
+

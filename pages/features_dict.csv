@@ -1,0 +1,44 @@
+Feature,Type,Description,Proccess,File,Source Code Lines
+Id,String,Unique Identifier for each subject.,Iterating through each subject in the subjects dates csv file,Sleep All Subjects.csv,329
+DayOfExperiment ,Int,Number of days from the start of the experiment (from 1).,For each unique date of 'DateOfSleepEvening' column a consecutive rank value is assigned.,Sleep All Subjects.csv,271
+ExperimentDates ,Date,Date of the experiment day.,A date range array is created from the start date to the end date from the Subject Dates file. Include Not in Israel dates.,Sleep All Subjects.csv,258
+DateOfSleepEvening ,Date,The date when the subject was a sleep.,The Date of the sleep,,
+WeekdayOfSleepEvening,String,The day in the week where the sleep occur.,The day in the week by the date of sleep evening column.,Sleep All Subjects.csv,252
+SleepStartTime,datetime,The datetime value of the minute where the subject fall a sleep.,BedStartTime (by fitbit) - MinutesToFallASleep,Sleep All Subjects.csv,228
+SleepEndTime,datetime,The datetime value of the minute where the subject woke up.,BedEndTime (by fitbit) - MinutesInBedAfterWakeup,Sleep All Subjects.csv,230
+BedStartTime,datetime,The datetime when the subject got to bed (by fitbit),The bed start time value from the sleep json file.,Sleep All Subjects.csv,214
+BedEndTime,datetime,The datetime when the subject got out of bed (by fitbit),The bed end time value from the sleep json file.,Sleep All Subjects.csv,214
+ValidSleep,Bool,Is this sleep identified as a valid sleep or not,,,
+MainSleep(fibit Calculation),Bool,The value of the main sleep,,,
+SleepTimeInMinutes (our Calculation: SleepEndTime-SleepStartTime),Float,Number of minutes between sleep start time to sleep end time.,The total seconds in the interval (SleepEndTime - SleepStartTime) are divided by 60.,Sleep All Subjects.csv,315
+SleepTimeInMinutes (Fitbit Calculation),Int,The value of the sleep time in minutes by fitbit.,The value of sleep time in minutes by the sleep json.,Sleep All Subjects.csv,188
+Sleep Efficiency (SE SleepTimeInMinutes/MinutesInBed Ratio),Float,An index that representing the efficiency of the sleep as we defined.,(The value of sleep time in minutes as we defined - minutes awake,,
+Efficiency (Fitbit Calculation),Int,We are not have information about the way that fitbit defined this feature.,The value of efficiency by the sleep json.,Sleep All Subjects.csv,188
+SleepStartToMidnight(minutes),int,The minutes between midnight and sleep start time as we defined.,If the sleep start time was after 12:00 then: /n - (( 00:00 - SleepStartTime).seconds)/60 /n if sleep start time is before or equal to 12:00 then /n ((sleepStartTime -00:00).seconds) /60,Sleep All Subjects.csv,323
+MidnightToSleepEnd(minutes),Float,The minutes between sleep end time and midnight.,(SleepEndTime - 00:00).seconds / 60,Sleep All Subjects.csv,325
+MinutesToFallAsleep,Float,The time in minutes from when the subjects got to bed until he fall asleep.,The seconds between the time where the subject got in bed to the time where the first records that is not wake or awake in the sleep json,,
+MinutesInBedAfterWakeup,Float,The time in minutes from when the subjects wake up until he get out of bed.,The seconds between the time where the last record in his sleep json that not equal to wake or awake until the time he got out of bed in the sleep json,,
+MinutesToFallAsleep(fitbit calculation),Int,The amount of minutes fitbit defined that took the subject to fall asleep.,The value of the minutes to fall asleep in the sleep json.,Sleep All Subjects.csv,188
+MinutesInBedAfterAwake(fitbit calculation),Int,The amount of minutes fitbit defined that took the subject to get out of bed after he wake up.,The value of the minutes after awake in the sleep json.,Sleep All Subjects.csv,188
+NightDeepCount ,Int,Estimation of Fitbit of the amount of deep sleep at this night.,The value of theNightDeepCount in the sleep json.,Sleep All Subjects.csv,188
+NightDeepInMinutes ,Int,Estimation of Fitbit of the minutes that the subject was in deep sleep at this sleep.,The value of the NightDeepInMinutes in the sleep json.,Sleep All Subjects.csv,188
+NightLightCount ,Int,Estimation of Fitbit of the amount of light sleep at this night.,The value of the NightLightCount  in the sleep json.,Sleep All Subjects.csv,188
+NightLightInMinutes ,Int,Estimation of Fitbit of the minutes that the subject was in light sleep at this night.,The value of the NightLightInMinutes  in the sleep json.,Sleep All Subjects.csv,188
+NightRemCount,Int,Estimation of Fitbit of the amount of REM sleep in that night.,The value of the NightRemCount in the sleep json.,Sleep All Subjects.csv,188
+NightRemInMinutes ,Int,Estimation of Fitbit of the minutes that the subject was at REM sleep in this night.,The value of the NightRemInMinutes  in the sleep json.,Sleep All Subjects.csv,188
+NightAwakeCount ,Int,Estimation of Fitbit of the amount of time that the subject woke up during that night.,The value of the NightAwakeCount  in the sleep json.,Sleep All Subjects.csv,188
+NightAwakeInMinutes,Int,Estimation of Fitbit of the minutes that the subject was awake during this night.,The value of the NightAwakeInMinutes in the sleep json.,Sleep All Subjects.csv,188
+MidDaySleepCount ,Int,Estimation of Fitbit of the amount of time that the subject slept during that day.,The value of the MidDaySleepCount in the sleep json.,Sleep All Subjects.csv,188
+MidDaySleepInMinutes ,Int,Estimation of Fitbit of the minutes that the subject slept during this midday sleep.,The value of the MidDaySleepInMinutes in the sleep json.,Sleep All Subjects.csv,188
+MidDayAwakeCount ,Int,Estimation of Fitbit of the amount of time that the subject woked up during the midday sleep.,The value of the MidDayAwakeCount in the sleep json.,Sleep All Subjects.csv,188
+MidDayAwakeInMinutes ,Int,Estimation of Fitbit of the minutes that the subject was awake in bed during this midday sleep.,The value of the MidDayAwakeInMinutes in the sleep json.,Sleep All Subjects.csv,188
+MidDayRestlessCount ,Int,Estimation of Fitbit of the amount of time that the subject was restless during that midday sleep.,The value of theMidDayRestlessCount in the sleep json.,Sleep All Subjects.csv,188
+MidDayRestlessInMinutes ,Int,Estimation of Fitbit of the minutes that the subject restless during this midday sleep.,The value of the MidDayRestlessInMinutes in the sleep json.,Sleep All Subjects.csv,188
+Index ,Int,Index from 0 of the row.,,{subject} Steps.csv,
+DateTime ,dateTime,The datetime of this sample.,Slicing the dates according to the subject dates. If the subject wasnt in israel and the dates specified. in the not in israel file then slicing out the dates. ,{subject} Steps.csv,
+StepsInMinute ,Int,The number of steps in this minute.,The values that been recorded and represented as 'value' in the json file.,{subject} Steps.csv,
+DateTime ,dateTime,The datetime of this sample.,Slicing the dates according to the subject dates. If the subject wasnt in israel and the dates specified. in the not in israel file then slicing out the dates. ,{subject} Heart Rate.csv,
+NumOfValidSamples ,Int,The number of heart rate samples after cleaning the samples in this minute.,1. Check if the value of the confidence is higher than the threshold /n AND /n (check if the bpm value is lower or equal to 180 AND higher or equal to 40) /n 2. Group values for a minute and aggregate them with the count function.,{subject} Heart Rate.csv,
+NumOfValidSamplesAfterBfill ,Int,A 1 minute resolution vector that include the number of samples in this specific minute after the bFill missing values fill strategy.,1. Generating a vector of seconds for all the samples,,
+BpmMean ,Float,The most common value of the samples in this minute after the bfill.,The value of each minute that have more valid samples (before Bfill) that higher than a threshold (default to 4) /n OR /n more valid samples (after Bfill),,
+Mode ,String,If there is a valid value in this minute after the filters.,Unknown' if we not have any valid sample after filtering the seconds in this minute.,{subject} Heart Rate.csv,

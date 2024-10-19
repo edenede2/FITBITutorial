@@ -88,10 +88,16 @@ if show_results:
             st.header(result_df["Feature"][i])
             st.write("Type: " + result_df["Type"][i])
             st.write(result_df["Description"][i])
-            st.subheader("File: ", result_df["File"][i])
+            st.subheader(f"File: {result_df["File"][i]}")
             st.divider()
 
-            how= result_df["Proccess"][i].split(r"/n")
+            
+            how= result_df["Proccess"][i]
+
+            if r'/n' in how:
+                how = how.split(r'/n')
+            else:
+                how = [how]
 
             st.write("How we got it:")
 

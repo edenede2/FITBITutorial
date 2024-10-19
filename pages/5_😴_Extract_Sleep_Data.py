@@ -19,6 +19,20 @@ st.divider()
 
 st.header("Instructions")
 
+
+dependencies_container = st.container(border=True)
+
+dependencies_container.markdown(
+    """
+    Before you run the extract sleep data script, ensure that you have the following:
+    - The 'Experiment' folder with the necessary structure.
+    - The 'Data' folder in the 'Processed Data' folder after running the 'set up' script.
+    - The sleep json files for all the subjects you want to extract the sleep data for in the 'Data' folder (after the set up step).
+    - The 'Subjects Dates' file in the 'Metadata' folder with the subjects' dates.
+    """
+)
+
+
 st.write(
     """
     1. Open the app.

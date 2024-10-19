@@ -51,6 +51,21 @@ st.divider()
 
 st.header("2. How do we run the 'Combined File Generation' step?")
 
+
+
+
+dependencies_container = st.container(border=True)
+
+dependencies_container.markdown(
+    """
+    Before you run the preprocessing script, ensure that you have the following:
+    - The 'Data' folder in the 'Processed Data' folder after running the 'set up' script.
+    - The heart rate and the steps json files for all the subjects you want to extract the sleep data for in the 'Data' folder (after the set up step).
+    - The 'Subjects Dates' file in the 'Metadata' folder with the subjects' dates.
+    """
+)
+
+
 st.markdown(
     """
 1. Open the app from your desktop.

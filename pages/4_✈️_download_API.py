@@ -30,6 +30,9 @@ st.write(
 
 st.subheader("Instructions")
 
+
+
+
 st.write(
     """
     1. Open a text file on your computer by right-clicking on your desktop and selecting 'New' -> 'Text Document'.
@@ -234,6 +237,9 @@ st.divider()
 
 st.title("2. Download your fitbit data")
 
+
+
+
 st.write(
     """
     In this step, we will guide you through the process of downloading your fitbit data from the fitbit API.
@@ -241,6 +247,19 @@ st.write(
 )
 
 st.subheader("Instructions")
+
+
+
+dependencies_container = st.container(border=True)
+
+dependencies_container.markdown(
+    """
+    Before you run the download api script, ensure that you have the following:
+    - The 'Experiment' folder with the necessary structure.
+    - The 'Data' folder in the 'Experiment' folder (can be empty)
+    - The 'Subjects Dates' file in the 'Metadata' folder with the subjects' dates.
+    """
+)
 
 st.write(
     """

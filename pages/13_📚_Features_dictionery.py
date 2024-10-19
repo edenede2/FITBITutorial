@@ -110,18 +110,18 @@ if show_results:
             if result_df["Source Code Lines"][i] != None:
                 st.write("Source Code Line: ", result_df["Source Code Lines"][i])
 
-            page_link = result_df["Page"][i]
+            page = result_df["Page"][i]
 
             pages_dicts = {
                 "Extract Sleep": r"pages\5_😴_Extract_Sleep_Data.py",
-                "Preprocessing": r"pages\6_💓🚶‍♂️_Preprocessing.py",
+                "Preprocess": r"pages\6_💓🚶‍♂️_Preprocessing.py",
                 "Combine Step": r"pages\7_🤗_Combine_Step.py",
                 "EDA Extraction": r"pages\10_⚡_EDA_Analysis.py",
                 "HRV Analysis": r"pages\11_💞_HRV_Analysis.py",
                 "Final File": r"pages\12_🙌_Final_File.py",
             }
 
-            if page_link in pages_dicts:
+            if page in pages_dicts:
                 page_link = pages_dicts[page_link]
 
             st.page_link(page_link, label=f":green[Go to {result_df["Page"][i]} page]", icon="🔗")

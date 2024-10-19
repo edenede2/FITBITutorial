@@ -121,9 +121,8 @@ if show_results:
                 "Final File": r"pages\12_🙌_Final_File.py",
             }
 
-            if page in pages_dicts:
-                page_link = pages_dicts[page_link]
-
+            page_link = pages_dicts[page]
+            
             st.page_link(page_link, label=f":green[Go to {result_df["Page"][i]} page]", icon="🔗")
 
 

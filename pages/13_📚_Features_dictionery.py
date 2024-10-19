@@ -70,7 +70,7 @@ if show_results:
             st.write(result_df["Description"][i])
             st.write("File: ", result_df["File"][i])
             st.divider()
-            st.write(result_df["Proccess"][i])
+            st.write('How:', result_df["Proccess"][i])
             if result_df["Source Code Lines"][i] != None:
                 st.write("Source Code Line: ", result_df["Source Code Lines"][i])
 

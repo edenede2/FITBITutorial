@@ -91,10 +91,10 @@ if show_results:
             st.subheader("File: ", result_df["File"][i])
             st.divider()
 
-            how= result_df["Proccess"][i].split("\n")
+            how= result_df["Proccess"][i].split(r"\/n")
 
             st.write("How we got it:")
-            
+
             for i in range(len(how)):
                 st.write(how[i])
                 

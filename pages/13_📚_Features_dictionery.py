@@ -63,6 +63,6 @@ if show_results:
             st.write("File: ", result_df["File"][i])
             st.divider()
             st.write(result_df["Proccess"][i])
-            if result_df["Source Code Line"][i] != None:
-                st.write("Source Code Line: ", result_df["Source Code Line"][i])
+            if result_df["Source Code Lines"][i] != None:
+                st.write("Source Code Line: ", result_df["Source Code Lines"][i])
 

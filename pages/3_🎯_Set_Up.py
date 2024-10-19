@@ -29,7 +29,21 @@ st.write(
     """
 )
 
+
+
 st.subheader("Instructions")
+
+dependencies_container = st.container(border=True)
+
+dependencies_container.markdown(
+    """
+    Before you run the setup script, ensure that you have the following:
+    - The 'Experiment' folder with the necessary structure and files.
+    - The 'Data' folder in the 'Experiment' folder with the subjects' folders and raw files.
+    - The 'Subjects Dates' file in the 'Metadata' folder with the subjects' dates.
+    """
+)
+
 
 st.write(
     """

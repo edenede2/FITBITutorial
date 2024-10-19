@@ -36,6 +36,7 @@ with st.form("search"):
     # Every form must have a submit button.
     submitted = st.form_submit_button("Submit")
 
+
     show_results = False
 
     if submitted:
@@ -54,6 +55,22 @@ with st.form("search"):
                 )
             )
 
+        elif type_of == "Both":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("Feature").str.contains(text_input, strict=False)
+                    | pl.col("File").str.contains(text_input, strict=False)
+                )
+            )
+
+        # Add option to filter results
+        filter = st.radio(
+            "Filter by",
+            key="Filter results",
+            options=result_df["File"].unique()
+
+        )
         
         st.session_state.result_df = result_df
 
@@ -61,7 +78,10 @@ with st.form("search"):
 
         show_results = True
 
+
+
 if show_results:
+
     result_df = st.session_state.result_df
     for i in range(len(result_df)):
         with st.container(border=True):

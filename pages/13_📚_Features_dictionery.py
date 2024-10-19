@@ -86,11 +86,18 @@ if show_results:
     for i in range(len(result_df)):
         with st.container(border=True):
             st.header(result_df["Feature"][i])
-            st.subheader("Type: " + result_df["Type"][i])
+            st.write("Type: " + result_df["Type"][i])
             st.write(result_df["Description"][i])
-            st.write("File: ", result_df["File"][i])
+            st.subheader("File: ", result_df["File"][i])
             st.divider()
-            st.write('How:', result_df["Proccess"][i])
+
+            how= result_df["Proccess"][i].split("\n")
+
+            st.write("How we got it:")
+            
+            for i in range(len(how)):
+                st.write(how[i])
+                
             if result_df["Source Code Lines"][i] != None:
                 st.write("Source Code Line: ", result_df["Source Code Lines"][i])
 

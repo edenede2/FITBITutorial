@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("EDA Analysis Page")
+st.title("Extract EDA Page")
 
 
 st.divider()
@@ -9,7 +9,7 @@ st.header("Introduction")
 
 st.markdown(
     """
-In this page, we will discuss the 'EDA Analysis' page in our app.
+In this page, we will discuss the 'Extract EDA' page in our app.
 
 We will cover the following topics:
 1. How to extract the EDA data for all subjects.
@@ -20,6 +20,19 @@ We will cover the following topics:
 st.divider()
 
 st.header("1. How to extract the EDA data for all subjects?")
+
+
+dependencies_container = st.container(border=True)
+
+dependencies_container.markdown(
+    """
+    Before you run the extract eda script, ensure that you have the following:
+    - Heart rate csv files after the 'Preprocessing' step.
+    - 'mindfulness_eda_data_sessions.csv' and 'mindfulness_sessions.csv' files for all subjects in the 'Data' folder. (after the set up step)
+    - The 'Subjects Dates' file in the 'Metadata' folder with the subjects' dates.
+    """
+)
+
 
 st.markdown(
     """

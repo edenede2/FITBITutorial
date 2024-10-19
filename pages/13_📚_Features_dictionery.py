@@ -91,7 +91,7 @@ if show_results:
             st.subheader("File: ", result_df["File"][i])
             st.divider()
 
-            how= result_df["Proccess"][i].split(r"\/n")
+            how= result_df["Proccess"][i].split(r"/n")
 
             st.write("How we got it:")
 

@@ -85,7 +85,7 @@ if show_results:
     result_df = st.session_state.result_df
     for i in range(len(result_df)):
         with st.container(border=True):
-            st.subheader(result_df["Feature"][i])
+            st.subheader(f"Feature: {result_df["Feature"][i]}")
             st.write("Type: " + result_df["Type"][i])
             st.write(result_df["Description"][i])
             st.subheader(f"File: {result_df["File"][i]}")

@@ -123,6 +123,6 @@ if show_results:
 
             page_link = pages_dicts[page]
             
-            st.page_link(page_link, label=f":green[Go to {result_df["Page"][i]} page]", icon="🔗")
+            # st.page_link(page_link, label=f":green[Go to {result_df["Page"][i]} page]", icon="🔗")
 
 

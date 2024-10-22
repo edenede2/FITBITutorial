@@ -96,9 +96,9 @@ if show_results:
     for i in range(len(result_df)):
         with st.container(border=True):
             st.subheader(f"Feature: {result_df["Feature"][i]}")
+            st.write(f"File: {result_df["File"][i]}")
             st.write("Type: " + result_df["Type"][i])
             st.write(result_df["Description"][i])
-            st.subheader(f"File: {result_df["File"][i]}")
             st.divider()
 
             

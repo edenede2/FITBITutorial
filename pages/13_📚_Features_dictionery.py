@@ -30,7 +30,7 @@ with st.form("search"):
     type_of = st.radio(
         "Search by 👉",
         key="visibility",
-        options=["Feature name", "File name", "Both"],
+        options=["Feature name", "File name", "Both" , "Description"],
     )
 
     # Every form must have a submit button.
@@ -61,6 +61,13 @@ with st.form("search"):
                 .filter(
                     pl.col("Feature").str.contains(text_input, strict=False)
                     | pl.col("File").str.contains(text_input, strict=False)
+                )
+            )
+        elif type_of == "Description":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("Description").str.contains(text_input, strict=False)
                 )
             )
 
@@ -97,10 +104,11 @@ if show_results:
             
             how= result_df["Proccess"][i]
 
-            if r'/n' in how:
-                how = how.split(r'/n')
-            elif how == None:
+
+            if how == None:
                 how = ["No information available"]
+            elif r'/n' in how:
+                how = how.split(r'/n') 
             else:
                 how = [how]
 

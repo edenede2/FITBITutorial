@@ -99,6 +99,8 @@ if show_results:
 
             if r'/n' in how:
                 how = how.split(r'/n')
+            elif how == None:
+                how = ["No information available"]
             else:
                 how = [how]
 

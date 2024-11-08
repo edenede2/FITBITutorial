@@ -119,7 +119,7 @@ source_code_container = st.container()
 # collapsed source code
 with st.expander("Click to expand the source code"):
     st.code(
-        """
+        r"""
 from flask import session
 from dash import dcc, html, Dash, dependencies, dash_table, Input, Output, State, Patch, MATCH, ALL, callback
 from dash.exceptions import PreventUpdate
@@ -722,7 +722,7 @@ if __name__ == '__main__':
         exclude_friday = bool(sys.argv[5])
     except IndexError:
         param = 'FIBRO_TESTS'
-        now = datetime.datetime.now().strftime('%Y-%m- %H-%M-%S')
+        now = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
         user_name = 'Unknown'
         exclude_thursday = False
         exclude_friday = False

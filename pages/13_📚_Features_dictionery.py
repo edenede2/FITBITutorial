@@ -18,6 +18,7 @@ st.divider()
 
 features_df = (
     pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+
 )
 
 # create a session state to store the results dataframe
@@ -26,7 +27,7 @@ if "result_df" not in st.session_state:
 
 with st.form("search"):
     st.write("Search for a feature")
-    text_input = st.text_input("Feature or file name")
+    text_input = st.text_input("Feature or file name").lower()
     type_of = st.radio(
         "Search by 👉",
         key="visibility",
@@ -44,7 +45,7 @@ with st.form("search"):
             result_df = (
                 features_df
                 .filter(
-                    pl.col("Feature").str.contains(text_input, strict=False)
+                    pl.col("Feature").str.to_lowercase().str.contains(text_input, strict=False)
                 )
             )
         elif type_of == "File name":

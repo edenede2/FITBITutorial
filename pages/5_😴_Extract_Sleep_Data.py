@@ -722,7 +722,7 @@ if __name__ == '__main__':
         exclude_friday = bool(sys.argv[5])
     except IndexError:
         param = 'FIBRO_TESTS'
-        now = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
+        now = datetime.datetime.now().strftime('%Y-%m- %H-%M-%S')
         user_name = 'Unknown'
         exclude_thursday = False
         exclude_friday = False

@@ -52,7 +52,7 @@ with st.form("search"):
             result_df = (
                 features_df
                 .filter(
-                    pl.col("File").str.contains(text_input, strict=False)
+                    pl.col("File").str.to_lowercase().str.contains(text_input, strict=False)
                 )
             )
 
@@ -60,15 +60,15 @@ with st.form("search"):
             result_df = (
                 features_df
                 .filter(
-                    pl.col("Feature").str.contains(text_input, strict=False)
-                    | pl.col("File").str.contains(text_input, strict=False)
+                    pl.col("Feature").str.to_lowercase().str.contains(text_input, strict=False)
+                    | pl.col("File").str.to_lowercase().str.contains(text_input, strict=False)
                 )
             )
         elif type_of == "Description":
             result_df = (
                 features_df
                 .filter(
-                    pl.col("Description").str.contains(text_input, strict=False)
+                    pl.col("Description").str.to_lowercase().str.contains(text_input, strict=False)
                 )
             )
 

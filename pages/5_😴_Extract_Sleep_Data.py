@@ -126,4 +126,5 @@ with open(path, 'r') as file:
     code = file.read()
         """,
         language="python",
+        line_numbers=True,
     )

@@ -113,8 +113,11 @@ st.write(
 
 st.divider()
 
+
+source_code_container = st.container()
+
 # collapsed source code
-with st.beta_expander("View source code"):
+with st.expender("Click to expand the source code"):
     st.code(
         """
 path = os.path.join(project_path, 'Scripts', '5_😴_Extract_Sleep_Data.py')

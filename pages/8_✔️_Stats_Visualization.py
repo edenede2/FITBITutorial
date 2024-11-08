@@ -160,3 +160,6 @@ st.image(
     "pages/Screenshot 2024-10-12 191238.png"
 )
 
+
+st.divider()
+

@@ -112,3 +112,15 @@ st.write(
 )
 
 st.divider()
+
+# collapsed source code
+with st.beta_expander("View source code"):
+    st.code(
+        """
+path = os.path.join(project_path, 'Scripts', '5_😴_Extract_Sleep_Data.py')
+
+with open(path, 'r') as file:
+    code = file.read()
+        """,
+        language="python",
+    )

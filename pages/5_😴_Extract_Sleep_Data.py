@@ -119,7 +119,7 @@ source_code_container = st.container()
 # collapsed source code
 with st.expander("Click to expand the source code"):
     st.code(
-        """
+        '''
 from flask import session
 from dash import dcc, html, Dash, dependencies, dash_table, Input, Output, State, Patch, MATCH, ALL, callback
 from dash.exceptions import PreventUpdate
@@ -728,7 +728,7 @@ if __name__ == '__main__':
         exclude_friday = False
 
     main(param, now, user_name, exclude_thursday, exclude_friday)
-        """,
+        ''',
         language="python",
         line_numbers=True,
     )

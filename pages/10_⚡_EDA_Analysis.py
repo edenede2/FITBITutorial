@@ -671,7 +671,11 @@ if show_results:
         with st.container(border=True):
             st.subheader(f"Feature: {result_df["Feature"][i]}")
             st.write(f"File: {result_df["File"][i]}")
-            st.write("Type: " + result_df["Type"][i])
+            if result_df["Type"][i] == None:
+                results_type = " "
+            else:
+                results_type = result_df["Type"][i]
+            st.write(f"Type: {results_type}")
             st.write(result_df["Description"][i])
             st.divider()
 

@@ -1597,7 +1597,9 @@ if show_results:
             st.write(f"File: {result_df["File"][i]}")
             if result_df["Type"][i] == None:
                 results_type = " "
-            st.write("Type: " + results_type)
+            else:
+                results_type = result_df["Type"][i]
+            st.write(f"Type: {results_type}")
             st.write(result_df["Description"][i])
             st.divider()
 

@@ -2,8 +2,17 @@ import streamlit as st
 import pandas as pd
 import openpyxl
 
+st.set_page_config(
+    page_title="First steps",
+    page_icon="🤠",
+    layout="wide",
+)
+
+
 
 st.title("First steps")
+
+
 
 st.divider()
 

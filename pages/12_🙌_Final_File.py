@@ -2,6 +2,13 @@ import streamlit as st
 from mitosheet.streamlit.v1 import spreadsheet
 import polars as pl
 
+
+st.set_page_config(
+    page_title="Final File",
+    page_icon="🙌",
+    layout="wide",
+)
+
 st.title("Final File Page")
 
 

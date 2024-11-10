@@ -1,6 +1,15 @@
 import polars as pl
 import streamlit as st
 
+
+
+st.set_page_config(
+    page_title="Features Dictionery",
+    page_icon="📚",
+    layout="wide",
+)
+
+
 st.title("Features Dictionery Page")
 
 

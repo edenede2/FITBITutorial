@@ -2,6 +2,15 @@ import streamlit as st
 from mitosheet.streamlit.v1 import spreadsheet
 import polars as pl
 
+
+
+st.set_page_config(
+    page_title="Combine Step",
+    page_icon="🤗",
+    layout="wide",
+)
+
+
 st.title("Combined File Generation Step")
 
 

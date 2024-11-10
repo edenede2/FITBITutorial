@@ -1,5 +1,14 @@
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="Time Series Visualization",
+    page_icon="📈",
+    layout="wide",
+)
+
+
+
 st.title("Time Series Visualization")
 
 

@@ -4,7 +4,7 @@ st.title("Set up your processed data folder")
 
 st.divider()
 
-st.header("Let's get started!")
+st.header("Introduction")
 
 st.write(
     """

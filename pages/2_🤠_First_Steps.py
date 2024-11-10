@@ -7,7 +7,7 @@ st.title("First steps")
 
 st.divider()
 
-st.header("Lets get started!")
+st.header("Introduction")
 
 st.write(
     """

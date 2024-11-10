@@ -5,8 +5,8 @@ import polars as pl
 
 
 st.set_page_config(
-    page_title="Extract Sleep Data",
-    page_icon="😴",
+    page_title="Preprocessing",
+    page_icon="💓🚶‍♂️",
     layout="wide",
 )
 

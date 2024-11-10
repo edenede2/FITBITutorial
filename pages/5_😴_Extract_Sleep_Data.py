@@ -4,8 +4,8 @@ from mitosheet.streamlit.v1 import spreadsheet
 
 
 st.set_page_config(
-    page_title="Download API",
-    page_icon="📦",
+    page_title="Extract Sleep Data",
+    page_icon="😴",
     layout="wide",
 )
 

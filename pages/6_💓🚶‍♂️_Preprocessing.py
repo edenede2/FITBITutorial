@@ -1,4 +1,5 @@
 import streamlit as st
+from mitosheet.streamlit.v1 import spreadsheet
 
 st.title("Steps & HR Data Preprocessing")
 
@@ -661,3 +662,11 @@ if __name__ == '__main__':
         """
     , language="python",
     line_numbers=True,)
+
+
+
+with st.expander("Example subject steps file"):
+    spreadsheet("pages/C016 Steps.csv")
+
+with st.expander("Example subject heart rate file"):
+    spreadsheet("pages/C016 Heart Rate.csv")

@@ -1,4 +1,5 @@
 import streamlit as st
+from mitosheet.streamlit.v1 import spreadsheet
 
 st.title("Combined File Generation Step")
 
@@ -1484,3 +1485,13 @@ if __name__ == '__main__':
     , language='python'
     , line_numbers=True
     )
+
+
+
+
+with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file'):
+    spreadsheet(r'pages\C016 Heart Rate and Steps and Sleep Aggregated (1).csv')
+
+with st.expander('Example subject Metrics of Heart Rate By Activity file'):
+    spreadsheet(r'pages\C016 Metrics of Heart Rate By Activity.csv')
+

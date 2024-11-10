@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.title("Extract sleep data")
 
@@ -732,3 +733,8 @@ if __name__ == '__main__':
         language="python",
         line_numbers=True,
     )
+
+
+
+with st.expander("Sleep All Subjects file example"):
+    st.write(pd.read_csv(r'pages/Sleep All Subjects.csv'))

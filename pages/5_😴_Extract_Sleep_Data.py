@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from mitosheet.streamlit.v1 import spreadsheet
+
 
 st.title("Extract sleep data")
 
@@ -737,4 +739,4 @@ if __name__ == '__main__':
 
 
 with st.expander("Sleep All Subjects file example"):
-    st.write(pd.read_csv(r'pages/Sleep All Subjects.csv'))
+    spreadsheet(r'pages/Sleep All Subjects.csv')

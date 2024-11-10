@@ -95,16 +95,7 @@ st.image(
 st.markdown(
     """
 9. After the Final File generating process started, a black window will appear with the progress of the processing.
-"""
-)
 
-
-st.image(
-    r"pages/Screenshot 2024-10-19 175302.png"
-)
-
-st.markdown(
-    """
 10. After the processing is finished, the black window will close, and the Final file will be saved in the project output folder.
 """
 )

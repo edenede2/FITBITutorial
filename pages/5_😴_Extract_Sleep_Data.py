@@ -740,3 +740,29 @@ if __name__ == '__main__':
 
 with st.expander("Sleep All Subjects file example"):
     spreadsheet(r'pages/Sleep All Subjects.csv')
+
+with st.expander("Sleep Daily Details Exclude Thursday and Friday file example"):
+    spreadsheet(r'pages/Sleep Daily Details Exclude Thursday and Friday.csv')
+
+with st.expander("Sleep Daily Details Exclude Thursday file example"):
+    spreadsheet(r'pages/Sleep Daily Details Exclude Thursday.csv')
+
+with st.expander("Sleep Daily Details Exclude Friday file example"):
+    spreadsheet(r'pages/Sleep Daily Details Exclude Friday.csv')
+
+with st.expander("Sleep Daily Details Full Week file example"):
+    spreadsheet(r'pages/Sleep Daily Details Full Week.csv')
+
+with st.expander("Sleep Daily Summary Exclude Thursday and Friday file example"):
+    spreadsheet(r'pages/Sleep Daily Summary Exclude Thursday and Friday.csv')
+
+with st.expander("Sleep Daily Summary Exclude Thursday file example"):
+    spreadsheet(r'pages/Sleep Daily Summary Exclude Thursday.csv')
+
+with st.expander("Sleep Daily Summary Exclude Friday file example"):
+    spreadsheet(r'pages/Sleep Daily Summary Exclude Friday.csv')
+
+with st.expander("Sleep Daily Summary Full Week file example"):
+    spreadsheet(r'pages/Sleep Daily Summary Full Week.csv')
+
+    

@@ -1495,3 +1495,14 @@ with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file
 with st.expander('Example subject Metrics of Heart Rate By Activity file'):
     spreadsheet(r'pages\C016 Metrics of Heart Rate By Activity.csv')
 
+with st.expander('Example Full Week Summary of Heart Rate Metrics By Activity file'):
+    spreadsheet(r'pages\Full Week Summary of Heart Rate Metrics By Activity.csv')
+
+with st.expander('Example No Weekends Summary of Heart Rate Metrics By Activity file'):
+    spreadsheet(r'pages\No Weekends Summary of Heart Rate Metrics By Activity.csv')
+
+with st.expander('Example Full Week All Subjects of Heart Rate Metrics By Activity file'):
+    spreadsheet(r'pages\Full Week All Subjects of Heart Rate Metrics By Activity.csv')
+
+with st.expander('Example No Weekends All Subjects of Heart Rate Metrics By Activity file'):
+    spreadsheet(r'pages\No Weekends All Subjects of Heart Rate Metrics By Activity.csv')

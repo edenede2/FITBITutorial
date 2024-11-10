@@ -1,4 +1,5 @@
 import streamlit as st
+from mitosheet.streamlit.v1 import spreadsheet
 
 st.title("HRV Analysis Page")
 
@@ -917,3 +918,9 @@ if __name__ == '__main__':
     , language='python', 
     line_numbers=True
     )
+
+with st.expander('Example subject HRV Temperature Respiratory At Sleep file'):
+    spreadsheet(r'pages/sub_026 HRV Temperature Respiratory At Sleep.csv')
+
+with st.expander('Example Summary Of HRV Temperature Respiratory At Sleep file'):
+    spreadsheet(r'pages/Summary Of HRV Temperature Respiratory At Sleep.csv')

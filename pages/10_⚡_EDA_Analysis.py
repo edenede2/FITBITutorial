@@ -1,4 +1,5 @@
 import streamlit as st
+from mitosheet.streamlit.v1 import spreadsheet
 
 st.title("Extract EDA Page")
 
@@ -569,3 +570,13 @@ if __name__ == '__main__':
     , language='python'
     , line_numbers=True
     )
+
+
+with st.expander('Example subject EDA file'):
+    spreadsheet(r"pages/sub_026 EDA.csv")
+
+with st.expander('Example EDA Summary file'):
+    spreadsheet(r"pages/EDA Summary.csv")
+
+with st.expander('Example EDA All Subjects file'):
+    spreadsheet(r"pages/EDA All Subjects.csv")

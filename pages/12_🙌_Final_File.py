@@ -1,4 +1,5 @@
 import streamlit as st
+from mitosheet.streamlit.v1 import spreadsheet
 
 st.title("Final File Page")
 
@@ -443,3 +444,7 @@ if __name__ == '__main__':
 """
 , language='python'
 , line_numbers=True)
+    
+
+with st.expander('Example Final All Subjects Aggregation File'):
+    spreadsheet(r"pages/Final All Subjects Aggregation.csv")

@@ -1,5 +1,6 @@
 import streamlit as st
 from mitosheet.streamlit.v1 import spreadsheet
+import polars as pl
 
 st.title("Combined File Generation Step")
 
@@ -1506,3 +1507,113 @@ with st.expander('Example Full Week All Subjects of Heart Rate Metrics By Activi
 
 with st.expander('Example No Weekends All Subjects of Heart Rate Metrics By Activity file'):
     spreadsheet(r'pages\No Weekends All Subjects of Heart Rate Metrics By Activity.csv')
+st.divider()
+
+st.subheader("Combined files features dictionary")
+
+st.markdown(
+    """
+Here you can search for a specific features (i.e. columns) that you can find in the related files.
+"""
+)
+
+
+features_df = (
+    pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    .filter(pl.col("Page") == "Combine step")
+
+)
+
+# create a session state to store the results dataframe
+if "result_df" not in st.session_state:
+    st.session_state.result_df = None
+
+with st.form("search"):
+    st.write("Search for a feature")
+    text_input = st.text_input("Feature or file name").lower()
+    type_of = st.radio(
+        "Search by 👉",
+        key="visibility",
+        options=["Feature name", "File name", "Both" , "Description"],
+    )
+
+    # Every form must have a submit button.
+    submitted = st.form_submit_button("Submit")
+
+
+    show_results = False
+
+    if submitted:
+        if type_of == "Feature name":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("Feature").str.to_lowercase().str.contains(text_input, strict=False)
+                )
+            )
+        elif type_of == "File name":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("File").str.to_lowercase().str.contains(text_input, strict=False)
+                )
+            )
+
+        elif type_of == "Both":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("Feature").str.to_lowercase().str.contains(text_input, strict=False)
+                    | pl.col("File").str.to_lowercase().str.contains(text_input, strict=False)
+                )
+            )
+        elif type_of == "Description":
+            result_df = (
+                features_df
+                .filter(
+                    pl.col("Description").str.to_lowercase().str.contains(text_input, strict=False)
+                )
+            )
+
+        
+        
+        st.session_state.result_df = result_df
+
+        st.write("Results for ", text_input, type_of, " There is ", len(result_df), " results")
+
+        show_results = True
+
+
+
+if show_results:
+
+    result_df = st.session_state.result_df
+
+    # st.dataframe(result_df)
+
+    for i in range(len(result_df)):
+        with st.container(border=True):
+            st.subheader(f"Feature: {result_df["Feature"][i]}")
+            st.write(f"File: {result_df["File"][i]}")
+            st.write("Type: " + result_df["Type"][i])
+            st.write(result_df["Description"][i])
+            st.divider()
+
+            
+            how= result_df["Proccess"][i]
+
+
+            if how == None:
+                how = ["No information available"]
+            elif r'/n' in how:
+                how = how.split(r'/n') 
+            else:
+                how = [how]
+
+            st.write("How we got it:")
+
+            for j in range(len(how)):
+                st.write(how[j])
+                
+            if result_df["Source Code Lines"][i] != None:
+                st.write("Source Code Line: ", result_df["Source Code Lines"][i])

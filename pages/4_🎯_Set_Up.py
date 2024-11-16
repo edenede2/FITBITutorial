@@ -14,8 +14,25 @@ st.header("Introduction")
 
 st.write(
     """
-    In this section, we will guide you through the initial steps to set up your processed data folder.
-    
+    In this section we will set up the processed data folder. This folder is the main working directory. Because we don't want to change the raw data folder (Experiment\data) and because it contains irrelevant data, we will copy necessary folders from the raw data folder to the processed data folder. This is just a safety measure to make sure we can always restore the raw data. Also, we want to create a unified format that is not download method dependent.  We will also validate it to make sure our format is correct. 
+
+    """
+)
+
+intro_container = st.container()
+
+intro_container.markdown(
+    r"""
+'Necessary folders' are those folders we currently use for analysis. These folders include data on sleep, activity (steps), heart rate, EDA, sleep HRV, temperature, respiratory during sleep. 
+
+"""
+)
+
+st.markdown(
+    """
+    For future developers: this is where you need to adjust the code if the format of either the folders or files changes. The structure of the 'processed data' should be the same across all methods. 
+
+
     We will cover the following topics:
     1. Run the setup script.
     2. Validate the folder structures.

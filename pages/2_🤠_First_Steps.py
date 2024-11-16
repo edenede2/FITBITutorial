@@ -20,20 +20,30 @@ st.header("Introduction")
 
 st.write(
     """
-    Welcome to the first steps of your project! 🚀
+   In this step you will create the project folder, necessary files (subjects Dates, not in Israel) and raw data folder <br> project maintainer help is required (usually lab programmer). </br> This is a very important step that makes sure the code will run properly and smoothly. Note that due to differences in downloading methods (API, old website download, google takeouts) the content and structure of these folders might differ, but the relevant files should be roughly the same. At the “set up” section we will run a script that unifies different downloading methods into one format. Below we present two methods to *manually* download the folders, but there could be changes in the methods and steps in the future (thanks, Google). Besides changes in folder structure, data files might change as well. Thus, any changes made by Google\Fitbit in data structure should be carefully integrated by future developers. 
 
-    In this section, we will guide you through the initial steps to set up your project.
-
-    We will cover the following topics:
-    1. Setting up your project Google Drive folders.
-    2. Creating a new Data folder in Google Drive.
-    3. Creating a new Subject Dates csv file.
-    4. Creating a new not in Israel file.
-    5. Update your project settings in the app.
     
     """
 )
 
+intro_container = st.container(border=True)
+
+intro_container.markdown(
+    """
+It is also possible to AUTOMATICALLY download Fitbit data using the API. The data is the same as the manual download, so automatic download is preferred. The section “download API” explains how to do it. If you are using API you can skip section 2 in this tutorial.
+"""
+)
+
+st.markdown(r"""
+            
+
+Currently, the code assumes that - 
+1. A project folder is created in a shared drive folder shared with the project maintainer account: <enter email address>. 
+2. Folders' hierarchy are exactly as described below
+3. Subjects' dates (i.e. a .csv file containing records of the time range in which the subjects wore the Fitbit device) is stored in “Subjects Dates.csv” file 
+4. Generally, it is best to avoid measuring subjects when they are not in Israel (due to time zone differences). But if subjects are not in Israel during the time of measurement it is possible to record the times (up until 2 periods) in a different file called “not in israel.csv”. The code will ignore days where the subject is not in Israel when calculating daily and grand average features based the date ranges provided by this file but will keep data in the 1-minute resolution files, thus users can decide whether to use it for their own calculations. 
+"""
+            )
 st.divider()
 
 st.header("1. Setting up your project Google Drive folders")
@@ -42,7 +52,7 @@ st.write(
     """
     To start your project, you will need to create a specific folder structure in your Google Drive shared folder (i.e. project's folder).
     
-    Your folder structure should look like this (only at the initial stage):
+    Your folder structure should look like this:
     """
 )
 
@@ -50,7 +60,7 @@ st.write(
 
 folder_structure = """
 Shared drive
-└── AdmonPsy - PROJECT NAME
+└── PROJECT NAME
     └── Experiment
         ├── Data 
         └── Processed Data
@@ -72,9 +82,9 @@ st.image(
 
 
 
-st.write(
+st.markdown(
     """
-    The `AdmonPsy - PROJECT NAME` folder is the main folder for your project (PROJECT NAME = the namo of your project).
+    The `AdmonPsy - PROJECT NAME` folder is the main folder for your project (PROJECT NAME = the name of your project).
 
     The `Experiment` folder is the code "environment" for your project. It will contain the following subfolders:
 
@@ -90,7 +100,17 @@ st.write(
 
 st.divider()
 
-st.title("2. Creating a new Data folder in Google Drive")
+st.title("2. Downloading raw data.")
+
+
+st.markdown(
+    r"""
+In this section you will download the subject's raw data and store it in the raw data folder (simply called “data”). We begin by an explanation on the data folder structures followed by two methods to *manually* download the Fitbit raw data – one using google takeouts (relevant to @gmail.com accounts) and the old download relevant to non-Gmail accounts and will probably be deprecated soon. Thus, the google takeout method is the one relevant to new studies.
+
+
+:red[Note:] If you wish to download the data AUTOMATICALLY skip this step and move to download API section.
+"""
+)
 
 
 st.header("The Data folder")
@@ -167,7 +187,8 @@ st.markdown(
 9. Click on "Create export" (i.e. sometimes you would be required to enter your google password again).
 10. Wait for the export to be ready.
 11. Go to your google drive and find the file that you just exported under the name "takeout-{some long number}.zip" and download it. 
-    :red[Note:] The file will be on the root of your google drive and sometimes in one export there would be mre then one zip file, its important to download all of them.
+    
+    :red[Note:] The file will be on the root of your google drive and sometimes in one export there would be more then one zip file, its important to download all of them.
 """
 )
 
@@ -177,7 +198,7 @@ st.image(
 
 st.markdown(
     """
-12. Go back to your google drive and open the "Experiment" folder.
+12. go back to your project folder.
 13. Create a new folder called "Data" (case sensitive) if it doesn't exist.
 14. Open the "Data" folder and create a new folder with the name of your subject. The name should be "{subject group}_{subject number as 3 digit number}" (e.g. "sub_000" or "C_019").
 """
@@ -426,13 +447,13 @@ st.title("4. Creating a new not in Israel file")
 
 st.write(
     """
-    The `not in Israel` csv file will contain the dates where the subject was not in Israel.
+    The `not in Israel` excel (.xlsx) file will contain the dates where the subject was not in Israel.
 
     The file will be used to filter the raw data files and to generate the processed data output files in the next steps.
 
-    The `not in Israel` csv file should be located in the `Experiment` folder in the project's folder.
+    The `not in Israel` excel (.xlsx) file should be located in the `Experiment` folder in the project's folder.
 
-    The `not in Israel` csv file should contain the following columns:
+    The `not in Israel` excel (.xlsx) file should contain the following columns:
     - `Id` - the subject's ID (e.g. sub_000).
     - `היה בחו"ל? בזמן המדידה של השעון?` - a binary column that indicates if the subject was not in Israel during the experiment (לא/כן).
     - `start_date` - the start date of the subject not being in Israel (e.g. 2023-12-01).
@@ -454,7 +475,7 @@ st.title("5. Update your project settings in the app")
 
 st.write(
     """
-    The last step is to update your project settings in the app.
+    The last step is to update your project settings in the app. The app is installed in a designated computer located in our lab.
 
     The settings will include the following information:
     - The name of the project.

@@ -31,7 +31,7 @@ Make sure you fully understand the assumptions that are made in each step of ana
 Take the time to go over your setup files before running the code. Validate formatting (e.g. dates are in DD/MM/YYYY format), that you have downloaded all the folders and that they matched to the Subjects Dates.csv file and that you went through your notes to detect any irregularities in data recording. Any irregular pattern can affect code running. 
 
 
-<h3> Here is an overview of the different sections: </h3>
+<h3> Here is an overview of the different sections: </h3> 
 1. First steps: create the project folder, create necessary files (subjects Dates, not in Israel) and raw data folder. 
 2. Download API: connect subject's account to an API. Use it for automatically downloading raw data folders (recommended). <br>project maintainer help is required. </br>
 3. Set up: create and validate “processed data” folder. This is the main working directory.  This directory contains relevant and format-unified raw data, outputs, and metadata. Registration to FitbitExecution app is done in this step. <br>project maintainer help is required. </br>
@@ -45,5 +45,5 @@ Take the time to go over your setup files before running the code. Validate form
 11. Final file: the result of all features available, this is the main file that is used for data analysis. 
 
 
-    """
+    """, unsafe_allow_html=True
 )

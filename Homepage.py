@@ -38,7 +38,7 @@ Take the time to go over your setup files before running the code. Validate form
 
 1. First steps: create the project folder, create necessary files (subjects Dates, not in Israel) and raw data folder. 
 
-2. Download API: connect subject's account to an API. Use it for automatically downloading raw data folders (recommended). <br> project maintainer help is required. </br>
+2. <a href="https://fitbitutorial.streamlit.app/download_API"> Download API </a> : connect subject's account to an API. Use it for automatically downloading raw data folders (recommended). <br> project maintainer help is required. </br>
 
 3. Set up: create and validate “processed data” folder. This is the main working directory.  This directory contains relevant and format-unified raw data, outputs, and metadata. Registration to FitbitExecution app is done in this step. <br> project maintainer help is required. </br>
 

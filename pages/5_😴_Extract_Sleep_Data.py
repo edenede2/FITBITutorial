@@ -96,16 +96,6 @@ st.image(
 st.write(
     """
     7. After the process starts, you will see a black window that shows the progress of the process.
-    8. 9 Files will be generated for all the subjects that you selected:
-        - Sleep All Subjects.csv
-        - Sleep Daily Details Exclude Thursday and Friday.csv
-        - Sleep Daily Summary Exclude Thursday and Friday.csv
-        - Sleep Daily Details Exclude Thursday.csv
-        - Sleep Daily Summary Exclude Thursday.csv
-        - Sleep Daily Details Exclude Friday.csv
-        - Sleep Daily Summary Exclude Friday.csv
-        - Sleep Daily Details Full Week.csv
-        - Sleep Daily Summary Full Week.csv
     """
 )
 
@@ -115,13 +105,30 @@ st.image(
 
 st.write(
     """
-    9. When the process is finished, the black window will close, and you will see the message that the process is finished.
-    10. You finished the process of extracting the sleep data. Now you can move to the next step.
+    8. When the process is finished, the black window will close, and you will see the message that the process is finished.
+    9. You finished the process of extracting the sleep data. Now you can move to the next step.
     """
 )
 
 st.divider()
 
+st.markdown(
+    """
+1. Sleep All Subjects.csv: <it> all sleeps that were collected (valid and invalid) in a long format. </it> 
+2. Sleep Daily Details Exclude Thursday and Friday.csv: all valid sleeps, in a wide format, no including the sleep of Thursday and Friday night. 
+3. Sleep Daily Summary Exclude Thursday and Friday.csv: grand average of all valid sleeps per subject, excluding the sleep of Thursday and Friday night
+4. Sleep Daily Details Exclude Thursday.csv
+5. Sleep Daily Summary Exclude Thursday.csv
+6. Sleep Daily Details Exclude Friday.csv: all valid sleeps, in a wide format, no including the sleep Friday night.
+7. Sleep Daily Summary Exclude Friday.csv: grand average of all valid sleeps per subject, excluding the sleep of Friday night 
+8. Sleep Daily Details Full Week.csv: all valid sleeps, in a wide format, no including the sleep Friday night.
+9. Sleep Daily Summary Full Week.csv: all valid sleeps, in a wide format. 
+10. Sleep Daily Summary Full Week.csv: grand average of all valid sleeps, in a wide format. 
+
+"""
+)
+
+st.divider()
 
 source_code_container = st.container()
 

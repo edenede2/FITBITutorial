@@ -114,7 +114,7 @@ st.divider()
 
 st.markdown(
     """
-1. Sleep All Subjects.csv: <it> all sleeps that were collected (valid and invalid) in a long format. </it> 
+1. Sleep All Subjects.csv: <em> all sleeps that were collected (valid and invalid) in a long format. </em> 
 2. Sleep Daily Details Exclude Thursday and Friday.csv: all valid sleeps, in a wide format, no including the sleep of Thursday and Friday night. 
 3. Sleep Daily Summary Exclude Thursday and Friday.csv: grand average of all valid sleeps per subject, excluding the sleep of Thursday and Friday night
 4. Sleep Daily Details Exclude Thursday.csv
@@ -125,8 +125,8 @@ st.markdown(
 9. Sleep Daily Summary Full Week.csv: all valid sleeps, in a wide format. 
 10. Sleep Daily Summary Full Week.csv: grand average of all valid sleeps, in a wide format. 
 
-"""
-)
+""", unsafe_allow_html=True)
+
 
 st.divider()
 

@@ -18,12 +18,12 @@ st.divider()
 
 st.header("Introduction")
 
-st.write(
+st.markdown(
     """
    In this step you will create the project folder, necessary files (subjects Dates, not in Israel) and raw data folder <br> project maintainer help is required (usually lab programmer). </br> This is a very important step that makes sure the code will run properly and smoothly. Note that due to differences in downloading methods (API, old website download, google takeouts) the content and structure of these folders might differ, but the relevant files should be roughly the same. At the “set up” section we will run a script that unifies different downloading methods into one format. Below we present two methods to *manually* download the folders, but there could be changes in the methods and steps in the future (thanks, Google). Besides changes in folder structure, data files might change as well. Thus, any changes made by Google\Fitbit in data structure should be carefully integrated by future developers. 
 
     
-    """
+    """, unsafe_allow_html=True
 )
 
 intro_container = st.container(border=True)
@@ -38,9 +38,13 @@ st.markdown(r"""
             
 
 Currently, the code assumes that - 
+            
 1. A project folder is created in a shared drive folder shared with the project maintainer account: <enter email address>. 
+            
 2. Folders' hierarchy are exactly as described below
+            
 3. Subjects' dates (i.e. a .csv file containing records of the time range in which the subjects wore the Fitbit device) is stored in “Subjects Dates.csv” file 
+            
 4. Generally, it is best to avoid measuring subjects when they are not in Israel (due to time zone differences). But if subjects are not in Israel during the time of measurement it is possible to record the times (up until 2 periods) in a different file called “not in israel.csv”. The code will ignore days where the subject is not in Israel when calculating daily and grand average features based the date ranges provided by this file but will keep data in the 1-minute resolution files, thus users can decide whether to use it for their own calculations. 
 """
             )
@@ -127,7 +131,6 @@ st.write(
 note_container = st.container(border=True)
 note_container.markdown(
     """
-    :red[Note:]
     * The names of the files and folders that we will create in the steps below need to be **exactly** as written in the instructions.
     * The names of the files and folders are **case-sensitive**.
     """

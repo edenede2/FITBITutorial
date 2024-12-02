@@ -114,13 +114,14 @@ st.divider()
 
 st.markdown(
     """
-After the extract sleep data step, we will have 9 csv files, as follows:
+After the extract sleep data step, we will the following .csv files:
 
 1. Sleep All Subjects.csv: <em> all sleeps that were collected (valid and invalid) in a long format. </em> 
 2. Sleep Daily Details **.csv: <em> all valid sleeps, in a wide format, no including the sleep of Thursday and Friday night. </em> 
 3. Sleep Daily Summary **.csv: <em> grand average of all valid sleeps per subject, excluding the sleep of Thursday and Friday night </em> 
 
- Each "Daily Details" and "Daily Summary" file has X 4 versions: 
+
+ Each "Daily Details" and "Daily Summary" file has these variations: 
  - Full Week: no days are excluded 
  - Exclude Friday: omit weekends from calculations (weekends = days in Full week that their DayOfSleepEvenening is Friday)
  - Exclude Thursday: currently do not use (need to be removed)
@@ -753,26 +754,9 @@ if __name__ == '__main__':
 with st.expander("Sleep All Subjects file example"):
     spreadsheet(r'pages/Sleep All Subjects.csv')
 
-with st.expander("Sleep Daily Details Exclude Thursday and Friday file example"):
-    spreadsheet(r'pages/Sleep Daily Details Exclude Thursday and Friday.csv')
-
-with st.expander("Sleep Daily Details Exclude Thursday file example"):
-    spreadsheet(r'pages/Sleep Daily Details Exclude Thursday.csv')
-
-with st.expander("Sleep Daily Details Exclude Friday file example"):
-    spreadsheet(r'pages/Sleep Daily Details Exclude Friday.csv')
-
 with st.expander("Sleep Daily Details Full Week file example"):
     spreadsheet(r'pages/Sleep Daily Details Full Week.csv')
 
-with st.expander("Sleep Daily Summary Exclude Thursday and Friday file example"):
-    spreadsheet(r'pages/Sleep Daily Summary Exclude Thursday and Friday.csv')
-
-with st.expander("Sleep Daily Summary Exclude Thursday file example"):
-    spreadsheet(r'pages/Sleep Daily Summary Exclude Thursday.csv')
-
-with st.expander("Sleep Daily Summary Exclude Friday file example"):
-    spreadsheet(r'pages/Sleep Daily Summary Exclude Friday.csv')
 
 with st.expander("Sleep Daily Summary Full Week file example"):
     spreadsheet(r'pages/Sleep Daily Summary Full Week.csv')

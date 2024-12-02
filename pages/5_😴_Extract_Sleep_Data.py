@@ -125,6 +125,8 @@ After the extract sleep data step, we will the following .csv files:
  - Full Week: no days are excluded 
  - Exclude Friday: omit weekends from calculations (weekends = days in Full week that their DayOfSleepEvenening is Friday)
  - Exclude Thursday: currently do not use (need to be removed)
+
+ red:[Note] : Sleep Daily Details **.csv & Sleep Daily Summary **.csv do not include days where subjects were not in Israel OR days of dst_change OR invalid sleeps
 """, unsafe_allow_html=True)
 
 

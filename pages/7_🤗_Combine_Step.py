@@ -17,17 +17,17 @@ st.title("Combined File Generation Step")
 st.divider()
 
 
-with st.expander("Introduction"):
+st.header("Introduction"):
 
-    st.markdown(
-        """
-    In this page, we will discuss the 'Combined File Generation' step in our pipeline.
-    We will cover the following topics:
-    1. What is the 'Combined File' ?
-    2. How do we run the 'Combined File Generation' step?
-    3. How we validate the 'Combined File Generation' step?
+st.markdown(
     """
-    )
+In this page, we will discuss the 'Combined File Generation' step in our pipeline.
+We will cover the following topics:
+1. What is the 'Combined File' ?
+2. How do we run the 'Combined File Generation' step?
+3. How we validate the 'Combined File Generation' step?
+"""
+)
 
 st.divider()
 

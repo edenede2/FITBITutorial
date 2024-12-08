@@ -26,108 +26,108 @@ st.write(
 
 st.divider()
 
-st.header("Instructions")
+with st.expander("Instructions"):
 
 
-dependencies_container = st.container(border=True)
+    dependencies_container = st.container(border=True)
 
-dependencies_container.markdown(
-    """
-    Before you run the extract sleep data script, ensure that you have the following:
-    - The 'Experiment' folder with the necessary structure.
-    - The 'Data' folder in the 'Processed Data' folder after running the 'set up' script.
-    - The sleep json files for all the subjects you want to extract the sleep data for in the 'Data' folder (after the set up step).
-    - The 'Subjects Dates' file in the 'Metadata' folder with the subjects' dates.
-    """
-)
-
-
-st.write(
-    """
-    1. Open the app.
-    """
-)
-
-st.image(
-    "pages/Screenshot 2024-10-11 200217.png"
-)
-
-st.write(
-    """
-    2. Click on the 'extract sleep data' tab.
-    """
-)
-
-st.image(
-    "pages/Screenshot 2024-10-11 214608.png"
-)
-
-st.write(
-    """
-    3. Load your project by selecting the project and clicking on the 'Load' button.
-    """
-)
-
-st.image(
-    "pages/Screenshot 2024-10-11 214927.png"
-)
-
-st.write(
-    """
-    4. Review the table to ensure that each subject has a reasonable number of sleep records (e.g., at least 1 or 2 for a single month but more the 2 are reasonable too).
-    """
-)
-
-st.image(
-    "pages/Screenshot 2024-10-11 214857.png"
-)
-
-st.write(
-    """
-    5. You can now select the subjects for which you want to exclude by disabling the checkbox in the 'run' column.
-    6. Click on the 'Generate Sleep All Subjects' button to extract the sleep data for all subjects.
-    """
-)
-
-st.image(
-    "pages/Screenshot 2024-10-11 215148.png"
-)
-
-st.write(
-    """
-    7. After the process starts, you will see a black window that shows the progress of the process.
-    """
-)
-
-st.image(
-    "pages/Screenshot 2024-10-11 215234.png"
-)
-
-st.write(
-    """
-    8. When the process is finished, the black window will close, and you will see the message that the process is finished.
-    9. You finished the process of extracting the sleep data. Now you can move to the next step.
-    """
-)
-
-st.divider()
-
-st.markdown(
-    """
-After the extract sleep data step, we will the following .csv files:
-
-1. Sleep All Subjects.csv: <em> all sleeps that were collected (valid and invalid) in a long format. </em> 
-2. Sleep Daily Details **.csv: <em> all valid sleeps, in a wide format, no including the sleep of Thursday and Friday night. </em> 
-3. Sleep Daily Summary **.csv: <em> grand average of all valid sleeps per subject, excluding the sleep of Thursday and Friday night </em> 
+    dependencies_container.markdown(
+        """
+        Before you run the extract sleep data script, ensure that you have the following:
+        - The 'Experiment' folder with the necessary structure.
+        - The 'Data' folder in the 'Processed Data' folder after running the 'set up' script.
+        - The sleep json files for all the subjects you want to extract the sleep data for in the 'Data' folder (after the set up step).
+        - The 'Subjects Dates' file in the 'Metadata' folder with the subjects' dates.
+        """
+    )
 
 
- Each "Daily Details" and "Daily Summary" file has these variations: 
- - Full Week: no days are excluded 
- - Exclude Friday: omit weekends from calculations (weekends = days in Full week that their DayOfSleepEvenening is Friday)
- - Exclude Thursday: currently do not use (need to be removed)
+    st.write(
+        """
+        1. Open the app.
+        """
+    )
 
- red:[Note] : Sleep Daily Details **.csv & Sleep Daily Summary **.csv do not include days where subjects were not in Israel OR days of dst_change OR invalid sleeps
-""", unsafe_allow_html=True)
+    st.image(
+        "pages/Screenshot 2024-10-11 200217.png"
+    )
+
+    st.write(
+        """
+        2. Click on the 'extract sleep data' tab.
+        """
+    )
+
+    st.image(
+        "pages/Screenshot 2024-10-11 214608.png"
+    )
+
+    st.write(
+        """
+        3. Load your project by selecting the project and clicking on the 'Load' button.
+        """
+    )
+
+    st.image(
+        "pages/Screenshot 2024-10-11 214927.png"
+    )
+
+    st.write(
+        """
+        4. Review the table to ensure that each subject has a reasonable number of sleep records (e.g., at least 1 or 2 for a single month but more the 2 are reasonable too).
+        """
+    )
+
+    st.image(
+        "pages/Screenshot 2024-10-11 214857.png"
+    )
+
+    st.write(
+        """
+        5. You can now select the subjects for which you want to exclude by disabling the checkbox in the 'run' column.
+        6. Click on the 'Generate Sleep All Subjects' button to extract the sleep data for all subjects.
+        """
+    )
+
+    st.image(
+        "pages/Screenshot 2024-10-11 215148.png"
+    )
+
+    st.write(
+        """
+        7. After the process starts, you will see a black window that shows the progress of the process.
+        """
+    )
+
+    st.image(
+        "pages/Screenshot 2024-10-11 215234.png"
+    )
+
+    st.write(
+        """
+        8. When the process is finished, the black window will close, and you will see the message that the process is finished.
+        9. You finished the process of extracting the sleep data. Now you can move to the next step.
+        """
+    )
+
+    st.divider()
+
+    st.markdown(
+        """
+    After the extract sleep data step, we will the following .csv files:
+
+    1. Sleep All Subjects.csv: <em> all sleeps that were collected (valid and invalid) in a long format. </em> 
+    2. Sleep Daily Details **.csv: <em> all valid sleeps, in a wide format, no including the sleep of Thursday and Friday night. </em> 
+    3. Sleep Daily Summary **.csv: <em> grand average of all valid sleeps per subject, excluding the sleep of Thursday and Friday night </em> 
+
+
+    Each "Daily Details" and "Daily Summary" file has these variations: 
+    - Full Week: no days are excluded 
+    - Exclude Friday: omit weekends from calculations (weekends = days in Full week that their DayOfSleepEvenening is Friday)
+    - Exclude Thursday: currently do not use (need to be removed)
+
+    red:[Note] : Sleep Daily Details **.csv & Sleep Daily Summary **.csv do not include days where subjects were not in Israel OR days of dst_change OR invalid sleeps
+    """, unsafe_allow_html=True)
 
 
 st.divider()

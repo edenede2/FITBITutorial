@@ -74,7 +74,7 @@ with st.expander("1. Run the setup script"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 200217.png"
+        r"pages/assets/Screenshot 2024-10-11 200217.png"
     )
 
     st.write(
@@ -84,7 +84,7 @@ with st.expander("1. Run the setup script"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 201622.png"
+        r"pages/assets/Screenshot 2024-10-11 201622.png"
     )
 
     st.write(
@@ -94,7 +94,7 @@ with st.expander("1. Run the setup script"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 201647.png"
+        r"pages/assets/Screenshot 2024-10-11 201647.png"
     )
 
     st.write(
@@ -107,11 +107,11 @@ with st.expander("1. Run the setup script"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 202639.png"
+        r"pages/assets/Screenshot 2024-10-11 202639.png"
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 202701.png"
+        r"pages/assets/Screenshot 2024-10-11 202701.png"
     )
 
     st.write(
@@ -122,7 +122,7 @@ with st.expander("1. Run the setup script"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 202753.png"
+        r"pages/assets/Screenshot 2024-10-11 202753.png"
     )
 
     st.write(

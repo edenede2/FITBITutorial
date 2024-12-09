@@ -95,7 +95,7 @@ with st.expander("2. How do we run the 'preprocessing' step?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 200217.png"
+        r"pages/assets/Screenshot 2024-10-11 200217.png"
     )
 
     st.markdown(
@@ -105,7 +105,7 @@ with st.expander("2. How do we run the 'preprocessing' step?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 200217.png"
+        r"pages/assets/Screenshot 2024-10-11 200217.png"
     )
 
     st.markdown(
@@ -115,7 +115,7 @@ with st.expander("2. How do we run the 'preprocessing' step?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 154140.png"
+        r"pages/assets/Screenshot 2024-10-12 154140.png"
     )
 
     st.markdown(
@@ -126,7 +126,7 @@ with st.expander("2. How do we run the 'preprocessing' step?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 154441.png"
+        r"pages/assets/Screenshot 2024-10-12 154441.png"
     )
 
 
@@ -139,7 +139,7 @@ with st.expander("2. How do we run the 'preprocessing' step?"):
 
 
     st.image(
-        "pages/Screenshot 2024-10-12 154722.png"
+        r"pages/assets/Screenshot 2024-10-12 154722.png"
     )
 
 
@@ -150,7 +150,7 @@ with st.expander("2. How do we run the 'preprocessing' step?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 154801.png"
+        r"pages/assets/Screenshot 2024-10-12 154801.png"
     )
 
     st.markdown(
@@ -679,10 +679,10 @@ if __name__ == '__main__':
 
 
 with st.expander("Example subject steps file"):
-    spreadsheet("pages/C016 Steps.csv")
+    spreadsheet(r"pages/assets/C016 Steps.csv")
 
 with st.expander("Example subject heart rate file"):
-    spreadsheet("pages/C016 Heart Rate.csv")
+    spreadsheet(r"pages/assets/C016 Heart Rate.csv")
 
 
 st.divider()
@@ -697,7 +697,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 
 
 features_df = (
-    pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    pl.read_csv(r"pages/assets/features_dict.csv", encoding="ISO-8859-1")
     .filter(pl.col("Page") == "Preprocess")
 
 )

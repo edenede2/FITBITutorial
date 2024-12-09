@@ -52,7 +52,7 @@ with st.expander("2. How do we load the 'Stats Visualization' page?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 200217.png"
+        r"pages/assets/Screenshot 2024-10-11 200217.png"
     )
 
     st.markdown(
@@ -64,7 +64,7 @@ with st.expander("2. How do we load the 'Stats Visualization' page?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 163057.png"
+        r"pages/assets/Screenshot 2024-10-12 163057.png"
     )
 
     st.markdown(
@@ -80,7 +80,7 @@ with st.expander("2. How do we load the 'Stats Visualization' page?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 163330.png"
+        r"pages/assets/Screenshot 2024-10-12 163330.png"
     )
 
 
@@ -91,7 +91,7 @@ with st.expander("2. How do we load the 'Stats Visualization' page?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 183841.png"
+        r"pages/assets/Screenshot 2024-10-12 183841.png"
     )
 
 
@@ -123,7 +123,7 @@ with st.expander("3. How do we interpret the plots in the 'Stats Visualization' 
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 184651.png"
+        r"pages/assets/Screenshot 2024-10-12 184651.png"
     )
 
     st.subheader("2. The percentage of missing heart rate data for each day of experiment")
@@ -146,7 +146,7 @@ with st.expander("3. How do we interpret the plots in the 'Stats Visualization' 
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 185638.png"
+        r"pages/assets/Screenshot 2024-10-12 185638.png"
     )
 
     st.subheader("3. The percentage of missing sleep data for all the days of experiment")
@@ -165,7 +165,7 @@ with st.expander("3. How do we interpret the plots in the 'Stats Visualization' 
     )
 
     st.image(
-        "pages/Screenshot 2024-10-12 191238.png"
+        r"pages/assets/Screenshot 2024-10-12 191238.png"
     )
 
 

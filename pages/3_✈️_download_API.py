@@ -46,7 +46,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 204755.png"
+        r"pages/assets/Screenshot 2024-10-11 204755.png"
     )
 
     st.write(
@@ -59,7 +59,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 210137.png"
+        r"pages/assets/Screenshot 2024-10-11 210137.png"
     )
 
     st.write(
@@ -71,7 +71,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 203716.png"
+        r"pages/assets/Screenshot 2024-10-11 203716.png"
     )
 
     st.write(
@@ -82,7 +82,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 190824.png"
+        r"pages/assets/Screenshot 2024-10-11 190824.png"
     )
 
 
@@ -94,7 +94,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 203851.png"
+        r"pages/assets/Screenshot 2024-10-11 203851.png"
     )
 
 
@@ -119,11 +119,11 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 204431.png"
+        r"pages/assets/Screenshot 2024-10-11 204431.png"
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 204452.png"
+        r"pages/assets/Screenshot 2024-10-11 204452.png"
     )
 
     st.write(
@@ -137,7 +137,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 210356.png"
+        r"pages/assets/Screenshot 2024-10-11 210356.png"
     )
 
     st.write(
@@ -147,11 +147,11 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 210317.png"
+        r"pages/assets/Screenshot 2024-10-11 210317.png"
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 210356.png"
+        r"pages/assets/Screenshot 2024-10-11 210356.png"
     )
 
 
@@ -163,7 +163,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 213543.png"
+        r"pages/assets/Screenshot 2024-10-11 213543.png"
     )
 
     st.write(
@@ -174,7 +174,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 210653.png"
+        r"pages/assets/Screenshot 2024-10-11 210653.png"
     )
 
     st.write(
@@ -185,7 +185,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 210913.png"
+        r"pages/assets/Screenshot 2024-10-11 210913.png"
     )
 
 
@@ -196,7 +196,7 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 210936.png"
+        r"pages/assets/Screenshot 2024-10-11 210936.png"
     )
 
 
@@ -209,11 +209,11 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 211126.png"
+        r"pages/assets/Screenshot 2024-10-11 211126.png"
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 211204.png"
+        r"pages/assets/Screenshot 2024-10-11 211204.png"
     )
 
     st.write(
@@ -225,11 +225,11 @@ with st.expander("1. Get your Fitbit API token"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 211441.png"
+        r"pages/assets/Screenshot 2024-10-11 211441.png"
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 211604.png"
+        r"pages/assets/Screenshot 2024-10-11 211604.png"
     )
 
     st.write(
@@ -274,7 +274,7 @@ with st.expander("2. Download your fitbit data"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 200217.png"
+        r"pages/assets/Screenshot 2024-10-11 200217.png"
     )
 
     st.write(
@@ -284,7 +284,7 @@ with st.expander("2. Download your fitbit data"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 211742.png"
+        r"pages/assets/Screenshot 2024-10-11 211742.png"
     )
 
     st.write(
@@ -294,7 +294,7 @@ with st.expander("2. Download your fitbit data"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 211820.png"
+        r"pages/assets/Screenshot 2024-10-11 211820.png"
     )
 
     st.write(
@@ -306,7 +306,7 @@ with st.expander("2. Download your fitbit data"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 212109.png"
+        r"pages/assets/Screenshot 2024-10-11 212109.png"
     )
 
 
@@ -318,7 +318,7 @@ with st.expander("2. Download your fitbit data"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 212227.png"
+        r"pages/assets/Screenshot 2024-10-11 212227.png"
     )
 
 
@@ -330,7 +330,7 @@ with st.expander("2. Download your fitbit data"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 214117.png"
+        r"pages/assets/Screenshot 2024-10-11 214117.png"
     )
 
     st.write(
@@ -342,7 +342,7 @@ with st.expander("2. Download your fitbit data"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 212657.png"
+        r"pages/assets/Screenshot 2024-10-11 212657.png"
     )
 
 st.divider()

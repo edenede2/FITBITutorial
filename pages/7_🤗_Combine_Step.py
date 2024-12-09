@@ -85,7 +85,7 @@ with st.expander("2. How do we run the 'Combined File Generation' step?"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 200217.png"
+        r"pages/assets/Screenshot 2024-10-11 200217.png"
     )
 
     st.markdown(
@@ -98,7 +98,7 @@ with st.expander("2. How do we run the 'Combined File Generation' step?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 161327.png"
+        r"pages/assets/Screenshot 2024-10-12 161327.png"
     )
 
     st.markdown(
@@ -109,7 +109,7 @@ with st.expander("2. How do we run the 'Combined File Generation' step?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 161833.png"
+        r"pages/assets/Screenshot 2024-10-12 161833.png"
     )
 
     st.markdown(
@@ -120,7 +120,7 @@ with st.expander("2. How do we run the 'Combined File Generation' step?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 161957.png"
+        r"pages/assets/Screenshot 2024-10-12 161957.png"
     )
 
     st.markdown(
@@ -130,7 +130,7 @@ with st.expander("2. How do we run the 'Combined File Generation' step?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 162126.png"
+        r"pages/assets/Screenshot 2024-10-12 162126.png"
     )
 
     st.markdown(
@@ -712,7 +712,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 
 
 features_df = (
-    pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    pl.read_csv(r"pages/assets/features_dict.csv", encoding="ISO-8859-1")
     .filter(pl.col("Page") == "Combine step")
 
 )

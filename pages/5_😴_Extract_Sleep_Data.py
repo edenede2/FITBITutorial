@@ -49,7 +49,7 @@ with st.expander("Instructions"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 200217.png"
+        r"pages/assets/Screenshot 2024-10-11 200217.png"
     )
 
     st.write(
@@ -59,7 +59,7 @@ with st.expander("Instructions"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 214608.png"
+        r"pages/assets/Screenshot 2024-10-11 214608.png"
     )
 
     st.write(
@@ -69,7 +69,7 @@ with st.expander("Instructions"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 214927.png"
+        r"pages/assets/Screenshot 2024-10-11 214927.png"
     )
 
     st.write(
@@ -79,7 +79,7 @@ with st.expander("Instructions"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 214857.png"
+        r"pages/assets/Screenshot 2024-10-11 214857.png"
     )
 
     st.write(
@@ -90,7 +90,7 @@ with st.expander("Instructions"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 215148.png"
+        r"pages/assets/Screenshot 2024-10-11 215148.png"
     )
 
     st.write(
@@ -100,7 +100,7 @@ with st.expander("Instructions"):
     )
 
     st.image(
-        "pages/Screenshot 2024-10-11 215234.png"
+        r"pages/assets/Screenshot 2024-10-11 215234.png"
     )
 
     st.write(
@@ -777,7 +777,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 
 
 features_df = (
-    (pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    (pl.read_csv(r"pages/assets/features_dict.csv", encoding="ISO-8859-1")
      .filter(pl.col("Page") == "Extract Sleep")
     )
 

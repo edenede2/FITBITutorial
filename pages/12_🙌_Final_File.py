@@ -71,11 +71,11 @@ with st.expander("1. How to extract the Final File for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-19 174906.png"
+        r"pages/assets/Screenshot 2024-10-19 174906.png"
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-19 175002.png"
+        r"pages/assets/Screenshot 2024-10-19 175002.png"
     )
 
 
@@ -86,7 +86,7 @@ with st.expander("1. How to extract the Final File for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-19 175041.png"
+        r"pages/assets/Screenshot 2024-10-19 175041.png"
     )
 
     st.markdown(
@@ -96,7 +96,7 @@ with st.expander("1. How to extract the Final File for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-19 175122.png"
+        r"pages/assets/Screenshot 2024-10-19 175122.png"
     )
 
     st.markdown(
@@ -451,7 +451,7 @@ if __name__ == '__main__':
     
 
 with st.expander('Example Final All Subjects Aggregation File'):
-    spreadsheet(r"pages/Final All Subjects Aggregation.csv")
+    spreadsheet(r"pages/assets/Final All Subjects Aggregation.csv")
 
 st.divider()
 
@@ -465,7 +465,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 
 
 features_df = (
-    pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    pl.read_csv(r"pages/assets/features_dict.csv", encoding="ISO-8859-1")
 
 )
 

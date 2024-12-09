@@ -63,7 +63,7 @@ with st.expander("1. What is the 'Time Series Visualization' page?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 195712.png"
+        r"pages/assets/Screenshot 2024-10-12 195712.png"
     )
 
 st.divider()
@@ -85,7 +85,7 @@ with st.expander("2. How do we load the 'Time Series Visualization' page?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 195352.png"
+        r"pages/assets/Screenshot 2024-10-12 195352.png"
     )
 
     st.markdown(
@@ -95,7 +95,7 @@ with st.expander("2. How do we load the 'Time Series Visualization' page?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 195509.png"
+        r"pages/assets/Screenshot 2024-10-12 195509.png"
     )
 
     st.divider()
@@ -112,7 +112,7 @@ with st.expander("2. How do we load the 'Time Series Visualization' page?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 195816.png"
+        r"pages/assets/Screenshot 2024-10-12 195816.png"
     )
 
 
@@ -126,11 +126,11 @@ with st.expander("2. How do we load the 'Time Series Visualization' page?"):
 
 
     st.image(
-        r"pages/Screenshot 2024-10-12 195925.png"
+        r"pages/assets/Screenshot 2024-10-12 195925.png"
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 200013.png"
+        r"pages/assets/Screenshot 2024-10-12 200013.png"
     )
 
 
@@ -143,7 +143,7 @@ with st.expander("2. How do we load the 'Time Series Visualization' page?"):
         )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 200114.png"
+        r"pages/assets/Screenshot 2024-10-12 200114.png"
     )
 
     st.markdown(
@@ -154,7 +154,7 @@ with st.expander("2. How do we load the 'Time Series Visualization' page?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 200200.png"
+        r"pages/assets/Screenshot 2024-10-12 200200.png"
     )
 
     st.markdown(
@@ -165,7 +165,7 @@ with st.expander("2. How do we load the 'Time Series Visualization' page?"):
         )
 
     st.image(
-        r"pages/Screenshot 2024-10-12 200334.png"
+        r"pages/assets/Screenshot 2024-10-12 200334.png"
     )
 
 st.divider()

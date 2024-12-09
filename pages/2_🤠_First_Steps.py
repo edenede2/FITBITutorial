@@ -81,7 +81,7 @@ with st.expander("1. Setting up your project Google Drive folders"):
     )
 
     st.image(
-        r'pages/Screenshot 2024-09-01 094511.png'
+        r'pages/assets/Screenshot 2024-09-01 094511.png'
     )
 
 
@@ -149,7 +149,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 184452.png'
+        r'pages/assets/Screenshot 2024-10-11 184452.png'
     )
 
 
@@ -160,7 +160,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 184653.png'
+        r'pages/assets/Screenshot 2024-10-11 184653.png'
     )
 
     st.markdown(
@@ -170,7 +170,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 184747.png'
+        r'pages/assets/Screenshot 2024-10-11 184747.png'
     )
 
     st.markdown(
@@ -180,7 +180,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 185010.png'
+        r'pages/assets/Screenshot 2024-10-11 185010.png'
     )
 
     st.markdown(
@@ -196,7 +196,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 190037.png'
+        r'pages/assets/Screenshot 2024-10-11 190037.png'
     )
 
     st.markdown(
@@ -208,7 +208,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 190230.png'
+        r'pages/assets/Screenshot 2024-10-11 190230.png'
     )
 
 
@@ -219,7 +219,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 190522.png'
+        r'pages/assets/Screenshot 2024-10-11 190522.png'
     )
 
 
@@ -230,7 +230,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 190615.png'
+        r'pages/assets/Screenshot 2024-10-11 190615.png'
     )
 
     st.markdown(
@@ -240,7 +240,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 190643.png'
+        r'pages/assets/Screenshot 2024-10-11 190643.png'
     )
 
     st.markdown(
@@ -262,7 +262,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 190824.png'
+        r'pages/assets/Screenshot 2024-10-11 190824.png'
     )
 
     st.markdown(
@@ -272,7 +272,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 191238.png'
+        r'pages/assets/Screenshot 2024-10-11 191238.png'
     )
 
     st.markdown(
@@ -282,7 +282,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 191313.png'
+        r'pages/assets/Screenshot 2024-10-11 191313.png'
     )
 
     st.markdown(
@@ -293,7 +293,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 191606.png'
+        r'pages/assets/Screenshot 2024-10-11 191606.png'
     )
 
     st.markdown(
@@ -306,7 +306,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 190230.png'
+        r'pages/assets/Screenshot 2024-10-11 190230.png'
     )
 
     st.markdown(
@@ -316,7 +316,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 192932.png'
+        r'pages/assets/Screenshot 2024-10-11 192932.png'
     )
 
     st.markdown(
@@ -326,7 +326,7 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 192959.png'
+        r'pages/assets/Screenshot 2024-10-11 192959.png'
     )
 
     st.markdown(
@@ -352,7 +352,7 @@ with st.expander("Subfolder structure"):
 
 
     st.image(
-        r'pages/Screenshot (3).png'
+        r'pages/assets/Screenshot (3).png'
     )
 
     sub_data_folder_structure = """
@@ -439,7 +439,7 @@ with st.expander("3. Creating a new Subject Dates csv file"):
 
     st.subheader("Subject Dates file example")
 
-    subdates = pd.read_csv("pages/Subjects Dates.csv").head(8)
+    subdates = pd.read_csv("pages/assets/Subjects Dates.csv").head(8)
 
     st.write(subdates)
 
@@ -467,7 +467,7 @@ with st.expander("4. Creating a new not in Israel file"):
         """
     )
 
-    notInIsrael = pd.read_excel("pages/not_in_israel_df.xlsx", sheet_name='participants').head(8)
+    notInIsrael = pd.read_excel("pages/assets/not_in_israel_df.xlsx", sheet_name='participants').head(8)
 
     st.write(notInIsrael)
 
@@ -495,7 +495,7 @@ with st.expander("5. Update your project settings in the app"):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 200217.png'
+        r'pages/assets/Screenshot 2024-10-11 200217.png'
     )
 
     st.markdown(
@@ -505,7 +505,7 @@ with st.expander("5. Update your project settings in the app"):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 200351.png'
+        r'pages/assets/Screenshot 2024-10-11 200351.png'
     )
 
     st.markdown(
@@ -515,7 +515,7 @@ with st.expander("5. Update your project settings in the app"):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 200536.png'
+        r'pages/assets/Screenshot 2024-10-11 200536.png'
     )
 
     st.markdown(
@@ -527,7 +527,7 @@ with st.expander("5. Update your project settings in the app"):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 200641.png'
+        r'pages/assets/Screenshot 2024-10-11 200641.png'
     )
 
 
@@ -539,7 +539,7 @@ with st.expander("5. Update your project settings in the app"):
     )
 
     st.image(
-        r'pages/Screenshot 2024-10-11 200803.png'
+        r'pages/assets/Screenshot 2024-10-11 200803.png'
     )
 
 st.divider()

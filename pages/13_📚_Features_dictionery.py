@@ -26,7 +26,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 st.divider()
 
 features_df = (
-    pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    pl.read_csv(r"pages/assets/features_dict.csv", encoding="ISO-8859-1")
 
 )
 

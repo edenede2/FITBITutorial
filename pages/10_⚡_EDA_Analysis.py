@@ -72,7 +72,7 @@ with st.expander("1. How to extract the EDA data for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-13 213157.png"
+        r"pages/assets/Screenshot 2024-10-13 213157.png"
     )
 
 
@@ -83,7 +83,7 @@ with st.expander("1. How to extract the EDA data for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-13 213407.png"
+        r"pages/assets/Screenshot 2024-10-13 213407.png"
     )
 
     st.markdown(
@@ -93,7 +93,7 @@ with st.expander("1. How to extract the EDA data for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-13 213542.png"
+        r"pages/assets/Screenshot 2024-10-13 213542.png"
     )
 
     st.markdown(
@@ -104,7 +104,7 @@ with st.expander("1. How to extract the EDA data for all subjects?"):
 
 
     st.image(
-        r"pages/Screenshot 2024-10-13 213850.png"
+        r"pages/assets/Screenshot 2024-10-13 213850.png"
     )
 
     st.markdown(
@@ -583,13 +583,13 @@ if __name__ == '__main__':
 
 
 with st.expander('Example subject EDA file'):
-    spreadsheet(r"pages/sub_026 EDA.csv")
+    spreadsheet(r"pages/assets/sub_026 EDA.csv")
 
 with st.expander('Example EDA Summary file'):
-    spreadsheet(r"pages/EDA Summary.csv")
+    spreadsheet(r"pages/assets/EDA Summary.csv")
 
 with st.expander('Example EDA All Subjects file'):
-    spreadsheet(r"pages/EDA All Subjects.csv")
+    spreadsheet(r"pages/assets/EDA All Subjects.csv")
 
 
 st.divider()
@@ -604,7 +604,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 
 
 features_df = (
-    pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    pl.read_csv(r"pages/assets/features_dict.csv", encoding="ISO-8859-1")
     .filter(pl.col("Page") == "EDA")
 
 )

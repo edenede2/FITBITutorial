@@ -74,7 +74,7 @@ with st.expander("1. How to extract the HRV data for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-19 173716.png"
+        r"pages/assets/Screenshot 2024-10-19 173716.png"
     )
 
 
@@ -85,7 +85,7 @@ with st.expander("1. How to extract the HRV data for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-19 173809.png"
+        r"pages/assets/Screenshot 2024-10-19 173809.png"
     )
 
     st.markdown(
@@ -95,7 +95,7 @@ with st.expander("1. How to extract the HRV data for all subjects?"):
     )
 
     st.image(
-        r"pages/Screenshot 2024-10-19 173857.png"
+        r"pages/assets/Screenshot 2024-10-19 173857.png"
     )
 
     st.markdown(
@@ -106,7 +106,7 @@ with st.expander("1. How to extract the HRV data for all subjects?"):
 
 
     st.image(
-        r"pages/Screenshot 2024-10-19 173948.png"
+        r"pages/assets/Screenshot 2024-10-19 173948.png"
     )
 
     st.markdown(
@@ -942,7 +942,7 @@ Here you can search for a specific features (i.e. columns) that you can find in 
 
 
 features_df = (
-    pl.read_csv(r"pages/features_dict.csv", encoding="ISO-8859-1")
+    pl.read_csv(r"pages/assets/features_dict.csv", encoding="ISO-8859-1")
     .filter(pl.col("Page") == "HRV Analysis")
 
 )

@@ -67,7 +67,7 @@ Some information on the raw .json files:
 
 -	The column ’Mode’ column in the heart rate.csv file is currently being ignored. 
 
-"""
+""" , unsafe_allow_html=True
 )
 
 st.divider()

@@ -38,7 +38,7 @@ Some information on the raw .json files:
 
 •	The Steps data is collected every 1 minute by the Fitbit watch. In the steps data, missing data due to (probably) storage limitations are common. Thus, steps data are expected to have more missing data compared to heart rate data. 
 
-<br> Heart rate preprocessing pipeline: </br>
+<br>**Heart rate preprocessing pipeline:**</br>
 
 1.	Find all heart rate .json files in the range between the start and end of the measuring period (based in Subjects Dates.csv file). 
 
@@ -54,7 +54,7 @@ Some information on the raw .json files:
 
 4.	Group bpm values by 1-minute to create a  1-minute resolution file. 
 
-<br> Steps preprocessing pipeline: </br>
+<br>**Steps preprocessing pipeline:**</br>
 
 1.	Find all steps .json files 
 

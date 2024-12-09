@@ -704,5 +704,5 @@ if show_results:
             for j in range(len(how)):
                 st.write(how[j])
                 
-            if result_df["Source Code Lines"][i] != None:
-                st.write("Source Code Line: ", result_df["Source Code Lines"][i])
+            # if result_df["Source Code Lines"][i] != None:
+            #     st.write("Source Code Line: ", result_df["Source Code Lines"][i])

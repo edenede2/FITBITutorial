@@ -754,14 +754,14 @@ if __name__ == '__main__':
 
 
 with st.expander("Sleep All Subjects file example"):
-    spreadsheet(r'pages/Sleep All Subjects.csv')
+    spreadsheet(r'pages/assets//Sleep All Subjects.csv')
 
 with st.expander("Sleep Daily Details Full Week file example"):
-    spreadsheet(r'pages/Sleep Daily Details Full Week.csv')
+    spreadsheet(r'pages/assets/Sleep Daily Details Full Week.csv')
 
 
 with st.expander("Sleep Daily Summary Full Week file example"):
-    spreadsheet(r'pages/Sleep Daily Summary Full Week.csv')
+    spreadsheet(r'pages/assets/Sleep Daily Summary Full Week.csv')
 
     
 

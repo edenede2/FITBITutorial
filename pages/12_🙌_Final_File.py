@@ -18,11 +18,9 @@ st.header("Introduction")
 
 st.markdown(
     """
-In this page, we will discuss the 'Final File' page in our app.
+In this step the code will take all available data that we already run and will combine it into one final file that will be stored in the Experiment\Processed Data\ Outputs folder. When one wishes to use summary statistics for the entire measuring period, it is recommended to use this file. 
 
-We will cover the following topics:
-1. How to extract the Final File for all subjects.
-2. How to review the extracted Final all subjects file.
+
 """
 )
 
@@ -566,3 +564,18 @@ if show_results:
                 
             # if result_df["Source Code Lines"][i] != None:
             #     st.write("Source Code Line: ", result_df["Source Code Lines"][i])
+
+
+with st.expander('features further explanation'):
+    st.markdown(
+        """
+| Column                                   | Meaning                                                                                          | How Calculated                                                                                                                                                                                                                                                                                                                                                     |
+|------------------------------------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Id                                       | Identifier of each subject                                                                      | Extracted from the 'Id' column, which represents the unique identifier of each subject present in the 'Sleep Daily Summary Full Week.csv', 'Full Week Summary of Heart Rate Metrics By Activity.csv', 'Summary Of HRV Temperature Respiratory At Sleep.csv', and 'EDA Summary.csv' files.                                     |
+| Various Sleep Metrics                    | Metrics related to sleep patterns and quality over the measuring period                        | These metrics are obtained from the 'Sleep Daily Summary Full Week.csv' file, which provides various sleep-related metrics for each subject over the entire week. They include parameters like 'Total Sleep Time (min)', 'Total Bed Time (min)', 'Total Awake Time (min)', and 'Total Time in Bed (min)'.                     |
+| Various Heart Rate and Steps Metrics     | Metrics related to heart rate during different activities over the measuring period            | These metrics are obtained from the 'Full Week Summary of Heart Rate Metrics By Activity.csv' file, which contains heart rate-related metrics for each subject during different activities over the entire week. It includes parameters like 'Average Heart Rate during Sleep (bpm)', 'Average Heart Rate during Exercise (bpm)'. |
+| Various HRV (Heart Rate Variability) Metrics | Metrics related to HRV, temperature, and respiratory during sleep                               | These metrics are obtained from the 'Summary Of HRV Temperature Respiratory At Sleep.csv' file, which provides HRV-related metrics for each subject during sleep. The metrics include 'HRV_RMSSD_mean', 'HRV_RMSSD_std', 'HRV_Coverage_mean', 'HRV_Coverage_std', 'HRV_Low_Frequency_mean', 'HRV_Low_Frequency_std', 'HRV_High_Frequency_mean', 'HRV_High_Frequency_std', 'Skin_Temperature_mean', 'Skin_Temperature_std', 'Skin_Temperature_min', 'Skin_Temperature_max', 'Sleep_Breaths_In_Minute_mean', and 'Sleep_Breaths_In_Minute_std'. |
+| Various EDA (Electrodermal Activity) Metrics | Metrics related to EDA during mindfulness sessions                                             | These metrics are obtained from the 'EDA Summary.csv' file, which provides EDA-related metrics for each subject during mindfulness sessions. The metrics include 'mean_2_minutes_EDA_mindfulness', 'std_2_minutes_EDA_mindfulness', 'mean_valid_2_minutes_EDA_mindfulness', and 'std_valid_2_minutes_EDA_mindfulness'.            |
+
+        """, unsafe_allow_html=True
+    )

@@ -18,12 +18,22 @@ st.header("Introduction")
 
 st.markdown(
     """
-In this page, we will discuss the 'Time Series Visualization' page in our app.
+After producing the final 1-minute resolution file, it is recommended to visually inspect the data. Here we provide convenient tools to visualize and examine the time series data.  The main goal is to detect unusual patterns and consider whether this subject should be included in the analysis. Also, it can also be used for examining some of the assumptions that were made in the previous steps. 
 
-We will cover the following topics:
-1. What is the 'Time Series Visualization' page?
-2. How do we load the 'Time Series Visualization' page?
-3. How do we control the plots in the 'Time Series Visualization' page?
+
+Taking the time to go over the time series data is an important part of quality check. 
+
+Generally, it is recommended to start the visual inspection using the following questions as guidelines: 
+
+1.	Does the length of the data is as expected? Do you have enough available days for your study goal? 
+
+2.	Are there any obvious periods of noticeable missing data? 
+
+3.	Does the signal look roughly ok? (i.e. can we detect periods of sleep? 
+
+4.	Is there an unusual pattern of data? e.g. complete days with zero steps, heart rate data looks too noisy, sleep data is really fragmented? 
+
+5.	Any other irregularities 
 """
 )
 

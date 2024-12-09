@@ -17,12 +17,11 @@ st.header("Introduction")
 
 st.markdown(
     """
-In this page, we will discuss the 'Stats Visualization' page in our app.
+In this section quality checks are done per subject. 
 
-We will cover the following topics:
-1. What is the 'Stats Visualization' page?
-2. How do we load the 'Stats Visualization' page?
-3. How do we interpret the plots in the 'Stats Visualization' page?
+
+Start by looking at missing data patterns followed by visualization of the different daily features <TODO>. 
+
 """
 )
 

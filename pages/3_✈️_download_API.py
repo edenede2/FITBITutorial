@@ -12,11 +12,8 @@ st.divider()
 
 st.write(
     """
-    In this step, we will guide you through the process of downloading your fitbit data from the fitbit API.
-    
-    We will cover the following topics:
-    1. Get your Fitbit API token.
-    2. Download your fitbit data.
+It is possible to automatically download your data through the API. This is a platform provided by Fitbit\Google that allows researchers and APP developers to extract data from users. This is done once per account. 
+
     """
 )
 

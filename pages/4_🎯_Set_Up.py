@@ -12,10 +12,11 @@ st.divider()
 
 st.header("Introduction")
 
-st.write(
+st.markdown(
     """
-    In this section we will set up the processed data folder. This folder is the main working directory. Because we don't want to change the raw data folder (Experiment\data) and because it contains irrelevant data, we will copy necessary folders from the raw data folder to the processed data folder. This is just a safety measure to make sure we can always restore the raw data. Also, we want to create a unified format that is not download method dependent.  We will also validate it to make sure our format is correct. 
+In this section we will set up the processed data folder. This folder is the main folder that is used for analysis. Because we don’t want to change the RAW data folder (\Experiment\data) and because it contains irrelevant data, the code will start by only copying ‘necessary folders’ from the RAW data folder to Experiment\processed data\data 
 
+- notice that this is basically just a copy. Processed data are stored under the Experiment\processed data\outputs folder. This is a safety measure to make sure we can always restore the raw data. Also, before copying data to the processed data\data folder we want to create a unified format that is not download-method dependent. We will also validate it to make sure our format is correct. 
     """
 )
 
@@ -23,8 +24,10 @@ intro_container = st.container()
 
 intro_container.markdown(
     r"""
-'Necessary folders' are those folders we currently use for analysis. These folders include data on sleep, activity (steps), heart rate, EDA, sleep HRV, temperature, respiratory during sleep. 
+‘Necessary folders’ are those folders we currently use for analysis. These folders include data on sleep, activity (steps), heart rate, EDA, sleep HRV, temperature, respiratory during sleep. 
 
+
+:red[Note:] For future developers, this is where you need to adjust the code if the format of either the folders or files changes. The structure of the ‘processed data’ should be the same across all methods. 
 """
 )
 
@@ -133,14 +136,35 @@ with st.expander("1. Run the setup script"):
 
 st.divider()
 
+folder_structure_shared = """
+Shared drive
+└── PROJECT NAME
+    └── Experiment
+        ├── Data 
+        └── Processed Data
+            ├── Data
+            |   └── subject
+            |       ├── Physical Activity
+            |       ├── Stress
+            |       └── Sleep
+            ├── Metadata
+            |   └── Subject Dates.csv
+            └── Outputs
+
+
+"""
 with st.expander("2. Validate the folder structures"):
 
     st.write(
-        """
-        After running the setup script, you should validate the folder structures to ensure that the processed data folder is set up correctly.
-        You should see the following folders:
-        - 'Data' folder in the 'Processed Data' folder with all the subjects that you have initialized. Each subject should have the same structure as the 'Data' folder in the 'Experiment' folder for the fitbit accounts, and each should include only the necessary files.
-        - 'Outputs' folder in the 'Processed Data' folder. It should be empty at this point. Once you start processing the data, the outputs will be saved in this folder.
+        f"""
+After running the setup script, you should validate the folder structures to ensure that the processed data folder is set up correctly. You should see the following folders:
+• 'Data' folder in the 'Processed Data' folder with all the subjects that you have initialized. Each subject should have the same structure as the 'Data' folder in the 'Experiment' folder for the fitbit accounts, and each should include only the necessary files.
+
+• 'Outputs' folder in the 'Processed Data' folder. It should be empty at this point. Once you start processing the data, the outputs will be saved in this folder.
+
+•	This is the current ‘correct’ structure of the ‘data’ folder: 
+
+{folder_structure_shared}
         """
     )
 

@@ -20,59 +20,61 @@ st.header("Introduction")
 
 st.markdown(
     """
-In this page, we will discuss the 'preprocessing' step in our pipeline.
-We will cover the following topics:
-1. What is the 'preprocessing' step?
-2. How do we run the 'preprocessing' step?
-3. How we validate the 'preprocessing' step?
+The 'preprocessing' step in our pipeline is where we clean, transform, and aggregate the heart rate and steps .json files that we have collected from the Fitbit watch in the 'set up' step. 
+
+The overall goal is to convert the heart rate and .json files into a clean 1-minute resolution file. 
+
+Basically, two csv files (one for heart rate and one for steps) are generated at the end of this step. These csv files are used only as an intermediate step that help merge and build the final 1-minute resolution file. In practice, we use the output of the ‘combine step’ tab which provides the final 1-minute resolution file and not the two files generated here. 
+
+However, data cleaning is done in this step, so it is important to understand what are the cleaning criteria that are used.  
+
+Some information on the raw .json files:
+
+•	Each heart rate json file contains the heart rate data for a specific day.
+
+•	Each steps json file contains the steps data for a specific month (starting from the 1st day of the month to the last day of the month).
+
+•	The Heart Rate data is recorded in various resolutions (1-15 seconds) by the Fitbit watch. This means that each sample needs to be weighted according to the number of seconds it is based on (15 seconds sample should have larger weight compared to a 5 seconds sample). Sometimes the watch may not be able to collect the data due to various reasons. 
+
+•	The Steps data is collected every 1 minute by the Fitbit watch. In the steps data, missing data due to (probably) storage limitations are common. Thus, steps data are expected to have more missing data compared to heart rate data. 
+
+<br> Heart rate preprocessing pipeline: </br>
+
+1.	Find all heart rate .json files in the range between the start and end of the measuring period (based in Subjects Dates.csv file). 
+
+2.	Convert unequal samples into a 1-second vector of heart rate data. This is done using backward filling: Fills missing values with the value of the next sample that is not nan (allows weighting of samples).
+
+3.	Omit invalid heart rate samples. valid heart rate data are defined as: 
+
+    a. Confidence values should be above 0 (confidence is and indicator for sample validity ranging from 0-3 and provided by the Fitbit watch) 
+
+    b. Heart rate bpm should be between 40 and 180 (can be modified by the user)
+
+    c. Minutes should have 1 or more original heart rate samples, regardless of their length.
+
+4.	Group bpm values by 1-minute to create a  1-minute resolution file. 
+
+<br> Steps preprocessing pipeline: </br>
+
+1.	Find all steps .json files 
+
+2.	Convert .json files into a csv file 
+
+
+:red[Note:] 
+
+-	If downloading the data through the API (‘Download API’ tab), The steps jsons that we are downloading from the Fitbit API has no missing values and in the 'download api' step we are cleaning the json file to include the same values as the json files that we are downloading from the Fitbit website. To change it, try to involve the programmer to change the code in the Fitbit API to include the missing values in the steps json file.
+
+-	The column ’Mode’ column in the heart rate.csv file is currently being ignored. 
+
 """
 )
 
 st.divider()
 
-with st.expander("1. What is the 'preprocessing' step?"):
-
-    st.markdown(
-        """
-    The 'preprocessing' step in our pipeline is where 
-
-    we clean, transform, and aggregate the heart rate and steps json files
-
-    that we have collected from the Fitbit watch in the 'set up' step.
 
 
-    It is important to remember that:
-
-    - The Heart Rate data is collected every 1 second by the Fitbit watch but sometimes the watch may not be able to collect the data due to various reasons.
-
-    - The Steps data is collected every 1 minute by the Fitbit watch.
-
-    However, the json files that we have downloaded from the Fitbit website may not be in the expected sample rate and may contain missing values for few minutes.
-
-    By fitbit, it is happening due to visualization purposes and to reduce the size of the data.
-
-    We found that the missing values occur in the data when the calories value is minimal for the specific day and show a default value.
-
-    :red[Note:] The steps jsons that we are downloading from the Fitbit API has :red[no missing values] and in the 'download api' step we are cleaning the json file to include the same values as the json files that we are downloading from the Fitbit website.
-
-    To change it, try to involve the programmer to change the code in the Fitbit API to include the missing values in the steps json file.
-
-    - Each heart rate json file contains the heart rate data for a specific day.
-
-    - Each steps json file contains the steps data for a specific month (starting from the 1st day of the month to the last day of the month).
-
-    - After the preprocessing step, we will have 4 csv files in sampling rate of 1 minute:
-        1. sub_000_heartrate.csv
-        2. sub_000_steps.csv
-        3. steps.csv (for all the subjects in the aggregated folder)
-        4. steps.parquet (for all the subjects in the aggregated folder)
-
-    """
-    )
-
-st.divider()
-
-with st.expander("2. How do we run the 'preprocessing' step?"):
+with st.expander("1. How do we run the 'preprocessing' step?"):
 
 
 
@@ -162,13 +164,23 @@ with st.expander("2. How do we run the 'preprocessing' step?"):
 
 st.divider()
 
-with st.expander("3. How we validate the 'preprocessing' step?", icon="🚿"):
+with st.container():
     st.markdown(
     """
-Not ready yet!
+After the preprocessing step, we will have 4 csv files in sampling rate of 1 minute:
+
+a.	sub_000_heartrate.csv: contains the heart rate data per minute.
+
+b.	sub_000_steps.csv: contains the heart rate data per minute.
+
+c.	steps.csv: (for all the subjects in the aggregated folder Experiment\Processed Data\aggregated outputs)
+
+d.	steps.parquet:  (for all the subjects in the aggregated folder, this file is used to accelerate processing speed of the code, not for analysis)
+
     """)
 
 st.divider()
+
 
 with st.expander("Show source code"):
     st.code(

@@ -14,15 +14,39 @@ st.title("Extract sleep data")
 
 st.divider()
 
-st.write(
-    """
-    In this section, we will guide you through the process of extracting your sleep data from the raw fitbit sleep data.
+st.header("Introduction")
 
-    We will cover the following topics:
-    1. Extract sleep data for all subjects.
-    2. Review the extracted data files.
+st.markdown(
+    """
+In this step sleep data is extracted from the raw .json files and converted to user-friendly .csv files. If the focus of the study is sleep, these csv files can be used for further analysis in other software programs such as SPSS, R etc. 
+
+In many steps of our analysis, features are aggregated daily. The calculation of many features such as daily steps count, or daily resting heart rate rely on sleep data that requires a definition of a period of main sleep for each day. This is because ‘days’ are defined as the period between two (main) night sleeps’ offset and not by calendar dates. This required a user provided definition of a ‘Valid (night) sleep’. 
+
+By default, valid sleep is defined as the longest sleep in the period between 8pm to 8am that lasts at least 3 hours. This is a hard assumption and should be taken into consideration when using data from different populations. From our experience it is reasonably valid and does not result in major data loss. 
+
+Some assumptions are made through this code:  
+
+1.	If sleep is missing for a date in the raw sleep.json that we download from the device, than all the period between this sleep and the next sleep (SleepStartTime in the sleep all subjects file) period is defined as “unknown”  
+
     """
 )
+
+intro_container = st.container()
+
+with intro_container:
+    st.markdown(
+        """
+:red[Note:]
+
+-	You must run ‘extract sleep data’ step before continuing to the next steps 
+
+-	 missing sleep data can occur even if heart rate and step data were collected
+
+-	Overall, the process of extracting sleep data combines extracting the default features the Fitbit app provides with in-house calculations that our lab has made. In case of duplicates, features names are separated by ‘Our calculation’ or ‘Fitbit calculation’ 
+
+"""
+    )
+
 
 st.divider()
 
@@ -114,19 +138,26 @@ with st.expander("Instructions"):
 
     st.markdown(
         """
-    After the extract sleep data step, we will the following .csv files:
+After the extract sleep data step, we will the following .csv files:
 
-    1. Sleep All Subjects.csv: <em> all sleeps that were collected (valid and invalid) in a long format. </em> 
-    2. Sleep Daily Details **.csv: <em> all valid sleeps, in a wide format, no including the sleep of Thursday and Friday night. </em> 
-    3. Sleep Daily Summary **.csv: <em> grand average of all valid sleeps per subject, excluding the sleep of Thursday and Friday night </em> 
+1.	Sleep All Subjects.csv: all sleeps that were collected (valid and invalid) in a long format. (rows = observations, columns = features)
+
+2.	Sleep Daily Details **.csv: all valid sleeps, in a wide format (columns = days, rows = subjects, suitable for repeated measures format in SPSS).
+
+3.	Sleep Daily Summary **.csv: grand average of all valid sleeps + in israel + dst is not changed per subject. These features are later aggregated into the final aggregation (under the ‘Final file’ tab). 
 
 
-    Each "Daily Details" and "Daily Summary" file has these variations: 
-    - Full Week: no days are excluded 
-    - Exclude Friday: omit weekends from calculations (weekends = days in Full week that their DayOfSleepEvenening is Friday)
-    - Exclude Thursday: currently do not use (need to be removed)
+Each "Daily Details" and "Daily Summary" file has these variations:
 
-    red:[Note] : Sleep Daily Details **.csv & Sleep Daily Summary **.csv do not include days where subjects were not in Israel OR days of dst_change OR invalid sleeps
+•	Full Week: no days are excluded
+
+•	Exclude Friday: omit weekends from calculations (weekends = days in Full week that their DayOfSleepEvenening is Friday)
+
+•	Exclude Thursday: currently do not in use
+
+
+red:[Note] : Sleep Daily Details **.csv & Sleep Daily Summary **.csv do not include days where subjects were not in Israel OR days of dst_change OR invalid sleeps (based on the following columns from ‘Sleep All Subjects’ : ValidSleep, not_in_israel, is_dst_change. 
+
     """, unsafe_allow_html=True)
 
 
@@ -880,3 +911,14 @@ if show_results:
                 
             # if result_df["Source Code Lines"][i] != None:
             #     st.write("Source Code Line: ", result_df["Source Code Lines"][i])
+
+
+with st.expander("Tips", icon="🤫"):
+    st.markdown(
+        """
+1.	Always start by looking at the “sleep all subject.csv” file. Try to see the percentage of invalid sleep to test if the above assumptions are valid for your data (check how many sleeps are lost because the threshold of valid sleep is too high). 
+
+2.	‘Sleep all subjects’ contains all recorded sleeps from all available subjects, while all other files rely only on valid sleeps + not in israel column = FALSE & is_dst_change column = FALSE. Sometimes, it is easier to use the sleep all subjects file in software like R and define a study-specific filters, and then calculate aggregated features manually. 
+
+"""
+    )

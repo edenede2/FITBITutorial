@@ -1409,22 +1409,47 @@ with st.expander("Show source code"):
 
 
 with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file'):
-    spreadsheet(r'pages\assets\C016 Heart Rate and Steps and Sleep Aggregated (1).csv')
+    table, code = spreadsheet(r'pages\assets\C016 Heart Rate and Steps and Sleep Aggregated (1).csv')
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True) 
 
 with st.expander('Example subject Metrics of Heart Rate By Activity file'):
-    spreadsheet(r'pages\C016 Metrics of Heart Rate By Activity.csv')
+    table, code = spreadsheet(r'pages\C016 Metrics of Heart Rate By Activity.csv')
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example Full Week Summary of Heart Rate Metrics By Activity file'):
-    spreadsheet(r'pages\Full Week Summary of Heart Rate Metrics By Activity.csv')
+    table, code = spreadsheet(r'pages\Full Week Summary of Heart Rate Metrics By Activity.csv')
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example No Weekends Summary of Heart Rate Metrics By Activity file'):
-    spreadsheet(r'pages\No Weekends Summary of Heart Rate Metrics By Activity.csv')
+    table, code = spreadsheet(r'pages\No Weekends Summary of Heart Rate Metrics By Activity.csv')
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example Full Week All Subjects of Heart Rate Metrics By Activity file'):
-    spreadsheet(r'pages\Full Week All Subjects of Heart Rate Metrics By Activity.csv')
+    table, code = spreadsheet(r'pages\Full Week All Subjects of Heart Rate Metrics By Activity.csv')
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example No Weekends All Subjects of Heart Rate Metrics By Activity file'):
-    spreadsheet(r'pages\No Weekends All Subjects of Heart Rate Metrics By Activity.csv')
+    table, code = spreadsheet(r'pages\No Weekends All Subjects of Heart Rate Metrics By Activity.csv')
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
+
 st.divider()
 
 st.subheader("Combined files features dictionary")

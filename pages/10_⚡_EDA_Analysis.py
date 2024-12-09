@@ -583,14 +583,25 @@ if __name__ == '__main__':
 
 
 with st.expander('Example subject EDA file'):
-    spreadsheet(r"pages/assets/sub_026 EDA.csv")
+    table, code = spreadsheet(r"pages/assets/sub_026 EDA.csv")
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example EDA Summary file'):
-    spreadsheet(r"pages/assets/EDA Summary.csv")
+    table, code = spreadsheet(r"pages/assets/EDA Summary.csv")
+
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example EDA All Subjects file'):
-    spreadsheet(r"pages/assets/EDA All Subjects.csv")
+    table, code = spreadsheet(r"pages/assets/EDA All Subjects.csv")
 
+    st.write(table)
+
+    st.code(code, language='python', line_numbers=True)
 
 st.divider()
 

@@ -590,11 +590,14 @@ with st.expander("Show source code"):
 with st.expander("Example subject steps file"):
     table,code = spreadsheet(r"pages/assets/C053 Steps.csv")
     st.write(table)
-    st.code(code)
+    st.code(code, language="python", line_numbers=True)
 
 with st.expander("Example subject heart rate file"):
-    spreadsheet(r"pages/assets/C016 Heart Rate.csv")
+    table, code = spreadsheet(r"pages/assets/C016 Heart Rate.csv")
 
+    st.write(table)
+
+    st.code(code, language="python", line_numbers=True)
 
 st.divider()
 

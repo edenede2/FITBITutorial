@@ -785,15 +785,26 @@ if __name__ == '__main__':
 
 
 with st.expander("Sleep All Subjects file example"):
-    spreadsheet(r'pages/assets//Sleep All Subjects.csv')
+    table, code = spreadsheet(r'pages/assets//Sleep All Subjects.csv')
+
+    st.write(table)
+
+    st.code(code, language="python", line_numbers=True)
 
 with st.expander("Sleep Daily Details Full Week file example"):
-    spreadsheet(r'pages/assets/Sleep Daily Details Full Week.csv')
+    table, code = spreadsheet(r'pages/assets/Sleep Daily Details Full Week.csv')
+
+    st.write(table)
+
+    st.code(code, language="python", line_numbers=True)
 
 
 with st.expander("Sleep Daily Summary Full Week file example"):
-    spreadsheet(r'pages/assets/Sleep Daily Summary Full Week.csv')
+    table, code = spreadsheet(r'pages/assets/Sleep Daily Summary Full Week.csv')
 
+    st.write(table)
+
+    st.code(code, language="python", line_numbers=True)
     
 
 st.divider()

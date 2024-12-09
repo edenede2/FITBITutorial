@@ -1409,7 +1409,7 @@ with st.expander("Show source code"):
 
 
 with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file'):
-    table, code = spreadsheet(r'pages\assets\C016 Heart Rate and Steps and Sleep Aggregated (1).csv')
+    table, code = spreadsheet(r'pages\assets\C016 Heart Rate and Steps and Sleep Aggregated.csv')
 
     st.write(table)
 

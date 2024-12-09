@@ -117,7 +117,7 @@ with st.expander("1. How to extract the HRV data for all subjects?"):
 
 st.divider()
 
-with st.expander("2. How to review the extracted HRV data files?", icon="📂"):
+with st.expander("2. How to review the extracted HRV data files?", icon="🚿"):
     st.markdown(
         """
         Not ready yet!

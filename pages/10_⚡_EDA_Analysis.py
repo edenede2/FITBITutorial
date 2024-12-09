@@ -115,7 +115,7 @@ with st.expander("1. How to extract the EDA data for all subjects?"):
 
 st.divider()
 
-with st.expander("2. How to review the extracted EDA data files?", icon="📂"):
+with st.expander("2. How to review the extracted EDA data files?", icon="🚿"):
     st.markdown(
         """
         Not ready yet!

@@ -109,7 +109,7 @@ with st.expander("1. How to extract the Final File for all subjects?"):
 
     st.divider()
 
-with st.expander("2. How to review the extracted Final File?", icon="👀"):
+with st.expander("2. How to review the extracted Final File?", icon="🚿"):
     st.markdown(
         """
         Not ready yet!

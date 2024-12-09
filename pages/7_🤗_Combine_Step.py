@@ -17,7 +17,7 @@ st.title("Combined File Generation Step")
 st.divider()
 
 
-st.header("Introduction"):
+st.header("Introduction")
 
 st.markdown(
     """
@@ -684,7 +684,7 @@ if __name__ == '__main__':
 
 
 with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file'):
-    spreadsheet(r'pages\C016 Heart Rate and Steps and Sleep Aggregated (1).csv')
+    spreadsheet(r'pages\assets\C016 Heart Rate and Steps and Sleep Aggregated (1).csv')
 
 with st.expander('Example subject Metrics of Heart Rate By Activity file'):
     spreadsheet(r'pages\C016 Metrics of Heart Rate By Activity.csv')

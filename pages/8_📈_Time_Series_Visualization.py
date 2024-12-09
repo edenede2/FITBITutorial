@@ -29,7 +29,7 @@ Generally, it is recommended to start the visual inspection using the following 
 
 2.	Are there any obvious periods of noticeable missing data? 
 
-3.	Does the signal look roughly ok? (e.g. can we detect periods of sleep? 
+3.	Does the signal look roughly ok? (e.g. can we detect periods of sleep? )
 
 4.	Is there an unusual pattern of data? e.g. complete days with zero steps, heart rate data looks too noisy, sleep data is really fragmented? 
 

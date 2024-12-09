@@ -679,7 +679,9 @@ if __name__ == '__main__':
 
 
 with st.expander("Example subject steps file"):
-    spreadsheet(r"pages/assets/C016 Steps.csv")
+    table,code = spreadsheet(r"pages/assets/C016 Steps.csv")
+    st.write(table)
+    st.code(code)
 
 with st.expander("Example subject heart rate file"):
     spreadsheet(r"pages/assets/C016 Heart Rate.csv")

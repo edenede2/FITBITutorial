@@ -121,7 +121,7 @@ with st.expander("2. Downloading raw data."):
 
     st.header("The Data folder")
 
-    st.write(
+    st.markdown(
         """
         The `Data` folder will contain the raw data files from the FitBit devices.
 

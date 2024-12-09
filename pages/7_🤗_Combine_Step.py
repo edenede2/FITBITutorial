@@ -1579,5 +1579,23 @@ Here is a table of features (resulted from the ‘Feature’ column in the 1-min
 :red[Note:] There is no overlap between Features, meaning that only unique minutes are used per feature. 
 
 
+These are the summary statistics used to calculated the features. Note that features are calculated without outliers. 
+
+| Sum Statistic                       | Sum Statistic - Definition                                                                                                                   |
+|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| _mean                               | Feature mean                                                                                                                                |
+| _std                                | Feature standard deviation                                                                                                                  |
+| _cv                                 | Feature coefficient of variation (Mean / Std). Calculate the coefficient of variation (CV) for various features of minutes of sleep for each subject. The CV is the ratio of the standard deviation to the mean. |
+| _min                                | Minimal value measured for the feature                                                                                                      |
+| _max                                | Maximal value measured for the feature                                                                                                      |
+| _count                              | Number of minutes included in the calculation                                                                                              |
+| _skew                               | Skewness of the feature                                                                                                                     |
+| empirical_skew_by_noa_from_paper    | Skewness of the feature based on Adler, D. A., Tseng, V. W. S., Qi, G., Scarpa, J., Sen, S., & Choudhury, T. (2021). Identifying mobile sensing indicators of stress-resilience. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 5(2), 1-32. |
+| minutes_percentage_of_              | Percent of feature                                                                                                                          |
+| _days_based                         | How many days are included in the analysis? (relevant only for summary files)                                                               |
+
+
+
+
 """,allow_unsafe_html=True)
     

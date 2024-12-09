@@ -164,7 +164,7 @@ with st.expander("1. How do we run the 'preprocessing' step?"):
 
 st.divider()
 
-with st.container():
+with st.container(border=True):
     st.markdown(
     """
 After the preprocessing step, we will have 4 csv files in sampling rate of 1 minute:

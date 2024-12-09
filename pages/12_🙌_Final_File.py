@@ -569,6 +569,10 @@ if show_results:
 with st.expander('features further explanation'):
     st.markdown(
         """
+
+The following table will provide an overview of the structure of the ‘Final aggregation file’. For more details check the feature dictionary.
+
+
 | Column                                   | Meaning                                                                                          | How Calculated                                                                                                                                                                                                                                                                                                                                                     |
 |------------------------------------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Id                                       | Identifier of each subject                                                                      | Extracted from the 'Id' column, which represents the unique identifier of each subject present in the 'Sleep Daily Summary Full Week.csv', 'Full Week Summary of Heart Rate Metrics By Activity.csv', 'Summary Of HRV Temperature Respiratory At Sleep.csv', and 'EDA Summary.csv' files.                                     |

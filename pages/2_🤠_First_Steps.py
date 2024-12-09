@@ -114,7 +114,6 @@ with st.expander("2. Downloading raw data."):
     In this section you will download the subject's raw data and store it in the raw data folder (simply called “data”). We begin by an explanation on the data folder structures followed by two methods to *manually* download the Fitbit raw data – one using google takeouts (relevant to @gmail.com accounts) and the old download relevant to non-Gmail accounts and will probably be deprecated soon. Thus, the google takeout method is the one relevant to new studies.
 
 
-    :red[Note:] If you wish to download the data AUTOMATICALLY skip this step and move to download API section.
     """
     )
 
@@ -451,6 +450,9 @@ with st.expander("4. Creating a new not in Israel file"):
 
     st.write(
         """
+        Here is how to create a not_in_israel file. Pay attention to dates formatting. Also, you should know that currently under country it is written קפריסין  the code will treat it as the subject was in israel. 
+
+        
         The `not in Israel` excel (.xlsx) file will contain the dates where the subject was not in Israel.
 
         The file will be used to filter the raw data files and to generate the processed data output files in the next steps.

@@ -452,7 +452,7 @@ with st.expander("4. Creating a new not in Israel file"):
         """
         Here is how to create a not_in_israel file. Pay attention to dates formatting. Also, you should know that currently under country it is written קפריסין  the code will treat it as the subject was in israel. 
 
-        
+
         The `not in Israel` excel (.xlsx) file will contain the dates where the subject was not in Israel.
 
         The file will be used to filter the raw data files and to generate the processed data output files in the next steps.
@@ -481,7 +481,7 @@ with st.expander("5. Update your project settings in the app"):
 
     st.write(
         """
-        The last step is to update your project settings in the app. The app is installed in a designated computer located in our lab.
+        The last step is to update your project settings in the app. The app will be installed on your computer  by the assistance of the project maintainer (programmer). 
 
         The settings will include the following information:
         - The name of the project.

@@ -588,7 +588,7 @@ with st.expander("Show source code"):
 
 
 with st.expander("Example subject steps file"):
-    table,code = spreadsheet(r"pages/assets/C016 Steps.csv")
+    table,code = spreadsheet(r"pages/assets/C053 Steps.csv")
     st.write(table)
     st.code(code)
 

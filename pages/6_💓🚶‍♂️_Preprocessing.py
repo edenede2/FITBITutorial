@@ -173,72 +173,14 @@ st.divider()
 with st.expander("Show source code"):
     st.code(
         r"""
-from flask import session
-from dash import dcc, html, Dash, dependencies, dash_table, Input, Output, State, Patch, MATCH, ALL, callback
-from dash.exceptions import PreventUpdate
-import dash_bootstrap_components as dbc
-import plotly.graph_objs as go
-import bioread as br
-import h5py
-import webview
-# import dash_core_components as dcc
-from flask import Flask
-import subprocess
-import platform
-import base64
-import io
-from pymongo import MongoClient
-import dash_ag_grid as dag
-import dash
-from datetime import datetime
-from typing import Optional
-from pathlib import Path
-from tqdm import tqdm
-import pandas as pd
-import configparser
-import numpy as np
-import polars as pl
-import datetime
-import logging
-import pickle
-import shutil
-import json
-import time
-import sys
-import os
-import re
-import tkinter as tk
-from tkinter import filedialog
-if os.path.exists(rf'C:\Users\PsyLab-6028'):
-    sys.path.append(r'C:\Users\PsyLab-6028\Desktop\FitbitDash\pages')
-else:
-    sys.path.append(r'C:\Users\PsyLab-7084\Documents\GitHub\FitbitDash\pages')
-
-import UTILS.utils as ut
-# from Test.Remove_sub.utils import get_latest_file_by_term as new_get_latest_file_by_term
-import warnings
-warnings.filterwarnings('ignore')
-
-
-
-
-
-def main(project, now, username):
-    try:
         FIRST = 0
         LAST = -1
-        if os.path.exists(rf'C:\Users\PsyLab-6028'):
-            exeHistory_path = Path(r'C:\Users\PsyLab-6028\Desktop\FitbitDash\pages\ExecutionHis\exeHistory.parquet')
-        else:
-            exeHistory_path = Path(r'C:\Users\PsyLab-7084\Documents\GitHub\FitbitDash\pages\ExecutionHis\exeHistory.parquet')   
+        exeHistory_path = Path(r'.\pages\ExecutionHis\exeHistory.parquet')   
 
         exeHistory = pl.read_parquet(exeHistory_path)
-        if os.path.exists(rf'C:\Users\PsyLab-6028'):
-            paths_json = json.load(open(r"C:\Users\PsyLab-6028\Desktop\FitbitDash\pages\Pconfigs\paths.json", "r"))
-        else:
-            paths_json = json.load(open(r"C:\Users\PsyLab-7084\Documents\GitHub\FitbitDash\pages\Pconfigs\paths.json", "r"))    
+        paths_json = json.load(open(r".\pages\Pconfigs\paths.json", "r")) 
 
-        
+
         project_path = Path(paths_json[project])
 
 
@@ -249,10 +191,8 @@ def main(project, now, username):
 
         if not AGGREGATED_OUTPUT_PATH_HISTORY.exists():
             os.makedirs(AGGREGATED_OUTPUT_PATH_HISTORY)
-        if os.path.exists(rf'C:\Users\PsyLab-6028'):
-            PROJECT_CONFIG = json.load(open(r'C:\Users\PsyLab-6028\Desktop\FitbitDash\pages\Pconfigs\paths data.json', 'r'))
-        else:
-            PROJECT_CONFIG = json.load(open(r'C:\Users\PsyLab-7084\Documents\GitHub\FitbitDash\pages\Pconfigs\paths data.json', 'r'))
+        
+        PROJECT_CONFIG = json.load(open(r'.\pages\Pconfigs\paths data.json', 'r'))
 
         SUBJECTS_DATES = METADATA_PATH.joinpath('Subjects Dates.csv')
 
@@ -265,10 +205,7 @@ def main(project, now, username):
                                         encoding='utf-8')
 
         subjects_dates_df = subjects_dates.sort(by='Id').unique('Id').drop_nulls('Id')
-        if os.path.exists(rf'C:\Users\PsyLab-6028'):
-            selected_subjects = pl.read_parquet(rf'C:\Users\PsyLab-6028\Desktop\FitbitDash\pages\sub_selection\{project}_sub_selection_folders_Preprocessing.parquet')
-        else:
-            selected_subjects = pl.read_parquet(rf'C:\Users\PsyLab-7084\Documents\GitHub\FitbitDash\pages\sub_selection\{project}_sub_selection_folders_Preprocessing.parquet') 
+        selected_subjects = pl.read_parquet(rf'.\pages\sub_selection\{project}_sub_selection_folders_Preprocessing.parquet')
             
     
         run_on_specific_subjects = True
@@ -389,9 +326,9 @@ def main(project, now, username):
     #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$old filter$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
             # Set 1 at 'Valid' column where confidence is above 1 and heart rate bpm is between 40 to 180.
-            subject_HR_df.loc[(subject_HR_df['confidence'] > 0) &
-                            (subject_HR_df['bpm'] >= 40) &
-                            (subject_HR_df['bpm'] <= 180), 'valid'] = 1
+            subject_HR_df.loc[(subject_HR_df['confidence'] >= con_threashold) &
+                            (subject_HR_df['bpm'] >= min_hr_threashold) &
+                            (subject_HR_df['bpm'] <= max_hr_threashold), 'valid'] = 1
 
             # Group by minute and count the number of bpm samples per minute.
             num_of_all_samples_df = subject_HR_df[['dateTime', 'bpm']].groupby(pd.Grouper(key='dateTime', freq='1Min')).agg(['count'])
@@ -632,46 +569,6 @@ def main(project, now, username):
             print(f'Subjects with missing steps.csv file:')
             print('\n'.join(subjects_with_missing_steps_files))
             print('Change/Delete the missing files and run the script again')
-
-    except Exception as e:
-        print(e)
-        time.sleep(10)
-
-
-
-def concate_to_old(term, path, new_df):
-    old_path = ut.new_get_latest_file_by_term(term, root=path)
-    if new_df.empty:
-        if not old_path.exists():
-            return pd.DataFrame()
-        
-        return pd.read_csv(old_path)
-    if old_path.exists():
-        old_df = pd.read_csv(old_path)
-        
-        for subject in new_df['Id'].unique():
-            if subject in old_df['Id'].unique():
-                old_df = old_df[old_df['Id'] != subject]
-        new_df = pd.concat([old_df, new_df])
-        new_df = new_df.sort_values(by=['Id'])
-        return new_df
-    else:
-        return new_df
-
-
-
-if __name__ == '__main__':
-    
-    try:
-        param = sys.argv[1]
-        now = sys.argv[2]
-        user_name = sys.argv[3]
-    except IndexError:
-        param = 'FIBRO_TESTS'
-        now = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
-        user_name = 'Unknown'
-
-    main(param, now, user_name)
         """
     , language="python",
     line_numbers=True,)

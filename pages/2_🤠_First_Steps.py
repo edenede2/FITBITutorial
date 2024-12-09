@@ -46,7 +46,7 @@ Currently, the code assumes that -
                         
 4.	What happens if subjects are not in Israel during part of the measuring period? Generally, it is best to avoid measuring subjects when they are not in Israel due to time zone differences. Fitbit does not store information on timezone, so measuring subjects outside of israel can cause timestamps problems. But if subjects are not in Israel during the time of measurement it is possible to record the times (up until 2 periods) in a different file called “not in israel.xlsx”. 
 
-:red[Note:] The code will ignore days where the subject is not in Israel when calculating daily and grand average features but will keep data in the 1-minute resolution file (sub_0001 Heart Rate and Steps and Sleep Aggregated.csv) as well as in the “Sleep All Subjects.csv” file. Thus users can decide whether to use it for their own calculations. 
+:red [Note:]  The code will ignore days where the subject is not in Israel when calculating daily and grand average features but will keep data in the 1-minute resolution file (sub_0001 Heart Rate and Steps and Sleep Aggregated.csv) as well as in the “Sleep All Subjects.csv” file. Thus users can decide whether to use it for their own calculations. 
             
 """
             )

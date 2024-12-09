@@ -81,7 +81,7 @@ with st.expander("1. Setting up your project Google Drive folders"):
     )
 
     st.image(
-        r'pages/assets/Screenshot 2024-09-01 094511.png'
+        r'./pages/assets/Screenshot 2024-09-01 094511.png'
     )
 
 

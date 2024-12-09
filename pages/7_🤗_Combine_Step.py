@@ -21,11 +21,28 @@ st.header("Introduction")
 
 st.markdown(
     """
-In this page, we will discuss the 'Combined File Generation' step in our pipeline.
-We will cover the following topics:
-1. What is the 'Combined File' ?
-2. How do we run the 'Combined File Generation' step?
-3. How we validate the 'Combined File Generation' step?
+In this step the final 1-minute resolution file is generated (each row is a minute, starting from the beginning of the measurement period until the end of the measuring period. 
+
+The file is called “sub_000 Heart rate Steps and Sleep Aggregated”.  
+
+The rationale behind this file is : 
+
+The first columns contain information regarding datetime and the number of heart rate samples that were used. The following columns contain information regarding time series of the different signals available (heart rate, steps, sleep). 
+
+
+Then, the following columns are used to hierarchically build a ‘Feature’ column. 
+
+The ‘Feature’ column focuses only on heart rate features and is used to group heart rate into different features based on sleep and steps data (for example, heart rate during sleep). For more details on the hierarchy look for the ‘Feature’ column in the feature dictionary section bellow. 
+
+Then, following outlier and invalid dates removal, all the minutes that share the same label are aggregated and different summary statistics are calculated daily or across all the measurement periods. 
+
+You can use the output of this steps in two ways:
+
+1.	You can use the aggregated features that are ready to use. 
+
+2.	You can use the 1-minute resolution and generate your own features. 
+
+
 """
 )
 
@@ -155,12 +172,34 @@ with st.expander("2. How do we run the 'Combined File Generation' step?"):
 st.divider()
 
 
-with st.expander("3. How we validate the 'Combined File Generation' step?",icon="🚿"):
+with st.container(border=True):
     st.markdown(
         """
-    Not ready yet!
-    """
+After the preprocessing step, we will have the following csv :
+
+a.	sub_000 Heart Rate and Steps and Sleep Aggregated.csv: the final 1-minute resolution file. 
+
+b.	Sub_000 Metrics of Heart Rate By Activity.csv:  contains summary statistics features for the entire measuring period for this subject, stored in ‘Outputs\sub_000 folder. 
+
+c.	All Subjects of Heart Rate Metrics By Activity.csv:  contains daily summary statistics features for all subjects in Outputs\Aggregated Outputs folder
+
+d.	 Summary of Heart Rate Metrics By Activity.csv: contains summary statistics features for the entire measuring period for all the subjects in Outputs\Aggregated Outputs folder
+
+
+:red[Note:] the **By activity.csv files have the following variations:
+
+    o	Full week **: contains aggregated outputs from the entire measuring period
+    
+    o	No weekends \ exclude weekends **: contains aggregated output while omitting data obtained from weekends (i.e. Weekend column in the 1-minute resolution file is FALSE). 
+
+    o	All aggregations are done after omitting minutes that are labeled as outliers (calculated within feature using the IQR*1.5 criteria) OR  not_in_israel = TRUE OR is_dst_change = TRUE.  
+
+
+
+"""
     )
+
+
 st.divider()
 
 with st.expander("Show source code"):
@@ -1500,3 +1539,45 @@ if show_results:
                 
             # if result_df["Source Code Lines"][i] != None:
             #     st.write("Source Code Line: ", result_df["Source Code Lines"][i])
+
+
+with st.container(border=True):
+    st.markdown(
+        """
+Use the feature dictionary to understand the process of each column in the 1-minute resolution file. 
+
+""")
+    
+
+
+with st.expander("Features in the aggregated files"):
+    st.markdown(
+        """
+For each feature in the ‘Feature’ column in the 1-minute resolution file, a set of summary statistics are calculated. Two types of files are generated: daily summary statistics and overall summary statistics to the entire measuring period. 
+
+The format is: Feature_summary_statistic (e.g. sleep_bpm_mean)
+
+Here is a table of features (resulted from the ‘Feature’ column in the 1-minute resolution file, followed by a table of the set of summary statistics that are used.  
+
+
+| Feature                     | Feature Definition                                                                                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| DayOfExperiment             | The day in the week that the experiment started. The first date that is identified in the sleep all subjects CSV                                   |
+| sleep_bpm                   | Heart rate during minutes that are labeled as ‘Valid Sleep’                                                                                       |
+| post_wake                   | The mean heart rate value of 60 minutes (60 rows) after sleep offset                                                                              |
+| pre_sleep                   | The mean heart rate value of 60 minutes (60 rows) after sleep onset                                                                               |
+| sum_of_steps_that_sampled   | Daily step count                                                                                                                                   |
+| mean_of_steps_that_sampled  | Minutely mean of steps                                                                                                                            |
+| rest_bpm                    | Mean resting heart rate. Calculated based on the steps values. It is considered 'rest' when the Mode column is 'awake' and the steps are 0.        |
+| high_activity_bpm           | Mean heart rate during periods of high activity. Calculated based on the steps values. When the Mode column is 'awake' and the steps are above 50. |
+| med_activity                | Mean heart rate during periods of medium activity. Calculated based on the steps values. When the Mode column is 'awake' and the steps are 10–49.  |
+| low_activity                | Mean heart rate during periods of low activity. Calculated based on the steps values. When the Mode column is 'awake' and the steps are 0–9.       |
+| 10_min_pre_high_activity    | Heart rate value 10 minutes before at least 5-minute period of high activity. Calculated only when there is no high activity in the prior 10 rows. |
+| 10_min_post_high_activity   | Heart rate value 10 minutes after at least 5-minute period of high activity. Calculated only when there is no high activity in the prior 10 rows.  |
+| invalid_sleep_bpm           | Heart rate during minutes that are labeled as ‘Invalid Sleep’                                                                                     |
+
+:red[Note:] There is no overlap between Features, meaning that only unique minutes are used per feature. 
+
+
+""",allow_unsafe_html=True)
+    

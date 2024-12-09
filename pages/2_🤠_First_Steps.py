@@ -471,7 +471,7 @@ with st.expander("4. Creating a new not in Israel file"):
         """
     )
 
-    notInIsrael = pd.read_excel("pages/assets/not_in_israel_df.xlsx", sheet_name='participants').head(8)
+    notInIsrael = pd.read_excel(r"pages/assets/not_in_israel_df.xlsx", sheet_name='participants').head(8)
 
     st.write(notInIsrael)
 

@@ -20,7 +20,7 @@ st.markdown(
 In this section quality checks are done per subject. 
 
 
-Start by looking at missing data patterns followed by visualization of the different daily features <TODO>. 
+Start by looking at missing data patterns followed by visualization of the different features. 
 
 """
 )

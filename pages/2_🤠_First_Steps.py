@@ -29,7 +29,7 @@ intro_container = st.container(border=True)
 
 intro_container.markdown(
     """
-It is also possible to AUTOMATICALLY download Fitbit data using API. The section “download API” explains how to do it.  
+It is also possible to AUTOMATICALLY download Fitbit data using API. The section “download API” explains how to do it. Currently, less recomended.
 """
 )
 
@@ -126,6 +126,8 @@ with st.expander("2. Downloading raw data."):
 
         In the set up step, the script will read the raw data files from the `Data` folder filter the necessary files by the name of the files and move them to the `Data` folder in the 'Processed Data' folder.
 
+        
+        :red[Note:] If you download the data by the api only, you can skip this step.
         """
     )
 
@@ -138,6 +140,8 @@ with st.expander("2. Downloading raw data."):
     )
 
     st.header("Instructions for google account")
+
+
 
     st.subheader("If your subject has a google account with the form of {subject name}@gmail.com")
 

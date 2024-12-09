@@ -449,7 +449,10 @@ if __name__ == '__main__':
     
 
 with st.expander('Example Final All Subjects Aggregation File'):
-    spreadsheet(r"pages/assets/Final All Subjects Aggregation.csv")
+    table,code = spreadsheet(r"pages/assets/Final All Subjects Aggregation.csv")
+
+    st.write(table)
+    st.code(code, language='python', line_numbers=True)
 
 st.divider()
 

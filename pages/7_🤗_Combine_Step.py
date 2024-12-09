@@ -188,11 +188,11 @@ d.	 Summary of Heart Rate Metrics By Activity.csv: contains summary statistics f
 
 :red[Note:] the **By activity.csv files have the following variations:
 
-    o	Full week **: contains aggregated outputs from the entire measuring period
+o	Full week **: contains aggregated outputs from the entire measuring period
     
-    o	No weekends \ exclude weekends **: contains aggregated output while omitting data obtained from weekends (i.e. Weekend column in the 1-minute resolution file is FALSE). 
+o	No weekends \ exclude weekends **: contains aggregated output while omitting data obtained from weekends (i.e. Weekend column in the 1-minute resolution file is FALSE). 
 
-    o	All aggregations are done after omitting minutes that are labeled as outliers (calculated within feature using the IQR*1.5 criteria) OR  not_in_israel = TRUE OR is_dst_change = TRUE.  
+o	All aggregations are done after omitting minutes that are labeled as outliers (calculated within feature using the IQR*1.5 criteria) OR  not_in_israel = TRUE OR is_dst_change = TRUE.  
 
 
 

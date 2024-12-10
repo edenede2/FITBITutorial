@@ -1416,7 +1416,7 @@ with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file
     st.code(code, language='python', line_numbers=True) 
 
 with st.expander('Example subject Metrics of Heart Rate By Activity file'):
-    table, code = spreadsheet(r'pages\C016 Metrics of Heart Rate By Activity.csv')
+    table, code = spreadsheet(r'pages\assets\C016 Metrics of Heart Rate By Activity.csv')
 
     st.write(table)
 

@@ -1410,7 +1410,7 @@ with st.expander("Show source code"):
 with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file'):
     table, code = spreadsheet(r'pages/assets/C016 Heart Rate and Steps and Sleep Aggregated.csv')
 
-    st.write(table)
+    #st.write(table)
 
     st.code(code, language='python', line_numbers=True) 
 

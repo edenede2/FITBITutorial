@@ -1410,42 +1410,36 @@ with st.expander("Show source code"):
 with st.expander('Example subject Heart Rate and Steps and Sleep Aggregated file'):
     table, code = spreadsheet(r'pages/assets/C016 Heart Rate and Steps and Sleep Aggregated.csv')
 
-    #st.write(table)
 
     st.code(code, language='python', line_numbers=True) 
 
 with st.expander('Example subject Metrics of Heart Rate By Activity file'):
     table, code = spreadsheet(r'pages/assets/C016 Metrics of Heart Rate By Activity.csv')
 
-    st.write(table)
 
     st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example Full Week Summary of Heart Rate Metrics By Activity file'):
     table, code = spreadsheet(r'pages/assets/Full Week Summary of Heart Rate Metrics By Activity.csv')
 
-    st.write(table)
 
     st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example No Weekends Summary of Heart Rate Metrics By Activity file'):
     table, code = spreadsheet(r'pages/assets/No Weekends Summary of Heart Rate Metrics By Activity.csv')
 
-    st.write(table)
 
     st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example Full Week All Subjects of Heart Rate Metrics By Activity file'):
     table, code = spreadsheet(r'pages/assets/Full Week All Subjects of Heart Rate Metrics By Activity.csv')
 
-    st.write(table)
 
     st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example No Weekends All Subjects of Heart Rate Metrics By Activity file'):
     table, code = spreadsheet(r'pages/assets/No Weekends All Subjects of Heart Rate Metrics By Activity.csv')
 
-    st.write(table)
 
     st.code(code, language='python', line_numbers=True)
 

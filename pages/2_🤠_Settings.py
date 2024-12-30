@@ -412,7 +412,20 @@ with st.expander("Subfolder structure"):
 
 
 
-                
+st.divider()
+
+with st.expander("Working with n Time Points"):
+    st.write(
+        """
+        Some of the projects use more then one time point. 
+
+        In this case, you should create a subfolder for each time point in the subject's folder. 
+        The subfolder structure should be the same as the 'Process Data' folder structure.
+
+        * The name of the folder is flexible.
+
+        """
+    )
 
 
 
@@ -424,6 +437,7 @@ with st.expander("3. Creating a new Subject Dates csv file"):
     st.write(
         """
         The `Subject Dates` csv file will contain the dates of the experiment for each subject.
+        Pay attention to dates formatting (dd/mm/yyyy) and the columns names.
         The file will be used to filter the raw data files and to generate the processed data output files in the next steps.
 
         The `Subject Dates` csv file should be located in the `Metadata` folder in the `Processed Data` folder.
@@ -454,7 +468,9 @@ with st.expander("4. Creating a new not in Israel file"):
 
     st.write(
         """
-        Here is how to create a not_in_israel file. Pay attention to dates formatting. Also, you should know that currently under country it is written קפריסין  the code will treat it as the subject was in israel. 
+        Here is how to create a not_in_israel file. 
+        Pay attention to dates formatting (yyyy-mm-dd) and the columns names. 
+        Also, you should know that currently under country it is written קפריסין  the code will treat it as the subject was in israel. 
 
 
         The `not in Israel` excel (.xlsx) file will contain the dates where the subject was not in Israel.

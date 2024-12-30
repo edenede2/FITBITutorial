@@ -195,6 +195,7 @@ o	No weekends \ exclude weekends **: contains aggregated output while omitting d
 o	All aggregations are done after omitting minutes that are labeled as outliers (calculated within feature using the IQR*1.5 criteria) OR  not_in_israel = TRUE OR is_dst_change = TRUE.  
 
 
+For elaboration on the not_in_israel \ is_dst_change (clock change) check feature dictionary
 
 """
     )

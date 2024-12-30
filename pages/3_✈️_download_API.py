@@ -31,6 +31,14 @@ with st.expander("1. Get your Fitbit API token"):
         """
     )
 
+
+    st.markdown(
+        """
+        :red[Important: The token is valid for 1 year. If you need to download the data again, you will need to repeat this process.]
+        """
+    )
+
+
     st.subheader("Instructions")
 
 
@@ -235,6 +243,7 @@ with st.expander("1. Get your Fitbit API token"):
         22. We will use the tokens in the next step to download your fitbit data.
         """
     )
+
 
 st.divider()
 

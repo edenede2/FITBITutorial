@@ -127,7 +127,7 @@ with st.expander("2. Downloading raw data."):
         In the set up step, the script will read the raw data files from the `Data` folder filter the necessary files by the name of the files and move them to the `Data` folder in the 'Processed Data' folder.
 
         
-        :red[Note:] If you download the data by the api only, you can skip this step.
+
         """
     )
 

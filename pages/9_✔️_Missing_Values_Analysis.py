@@ -3,12 +3,12 @@ import streamlit as st
 
 
 st.set_page_config(
-    page_title="Stats Visualization",
+    page_title="Missing Values Analysis",
     page_icon="📊",
     layout="wide",
 )
 
-st.title("Stats Visualization")
+st.title("Missing Values Analysis")
 
 
 st.divider()
@@ -27,11 +27,11 @@ Start by looking at missing data patterns followed by visualization of the diffe
 
 st.divider()
 
-with st.expander("1. What is the 'Stats Visualization' page?"):
+with st.expander("1. What is the 'Missing Values Analysis' page?"):
 
     st.markdown(
         """
-    The 'Stats Visualization' page in our app is where we visualize the statistics of the missing values for the combined file from the 'Combined File Generation' step.
+    The 'Missing Values Analysis' page in our app is where we visualize the statistics of the missing values for the combined file from the 'Combined File Generation' step.
 
     The statistics was calculated from the 1 minute resolution file of all the subjects in the project.
 
@@ -42,7 +42,7 @@ with st.expander("1. What is the 'Stats Visualization' page?"):
 
 st.divider()
 
-with st.expander("2. How do we load the 'Stats Visualization' page?"):
+with st.expander("2. How do we load the 'Missing Values Analysis' page?"):
 
     st.markdown(
         """
@@ -56,7 +56,7 @@ with st.expander("2. How do we load the 'Stats Visualization' page?"):
 
     st.markdown(
         """
-    2. Click on the 'Stats Visualization' tab.
+    2. Click on the 'Missing Values Analysis' tab.
 
     3. Select your project from the dropdown menu and click on the 'Load' button.
     """
@@ -96,11 +96,11 @@ with st.expander("2. How do we load the 'Stats Visualization' page?"):
 
 st.divider()
 
-with st.expander("3. How do we interpret the plots in the 'Stats Visualization' page?"):
+with st.expander("3. How do we interpret the plots in the 'Missing Values Analysis' page?"):
 
     st.markdown(
         """
-    The 'Stats Visualization' page shows the following plots:
+    The 'Missing Values Analysis' page shows the following plots:
     1. The amount of gaps in the heart rate data by the size of the gap in minutes and the number of gaps with that size.
     2. The percentage of missing heart rate data for each day of experiment with the mean percentage of missing data for all of the days.
     3. The percentage of missing sleep data for all the days of experiment.

@@ -34,8 +34,8 @@ The code is a wrapper around the 'CosinorPy' package, so for specific variables 
 
 In the app, you can modify several parameters:
             
-    1. Include \ omit not in Israel and dst (daylight saving time) dates, the default is to omit.
+1. Include \ omit not in Israel and dst (daylight saving time) dates, the default is to omit.
             
-    2. Window size (to how many days the cosinor data is fitted each time, default is 24 hours).
+2. Window size (to how many days the cosinor data is fitted each time, default is 24 hours).
             
             """, unsafe_allow_html=True)

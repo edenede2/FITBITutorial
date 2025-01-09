@@ -28,7 +28,7 @@ In the rhythmic analysis section, a parametric circadian rhythm model called “
 
 The code is a wrapper around the 'CosinorPy' package, so for specific variables documentation see:
             
-<a href="https://github.com/mmoskon/CosinorPy" target="_blank">
+<a href="https://github.com/mmoskon/CosinorPy" target="_blank"> CosinorPy documentation</a>
             
 
 

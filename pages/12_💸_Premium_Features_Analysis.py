@@ -924,13 +924,13 @@ if __name__ == '__main__':
     )
 
 with st.expander('Example subject HRV Temperature Respiratory At Sleep file'):
-    table, code = spreadsheet(r'pages/sub_026 HRV Temperature Respiratory At Sleep.csv')
+    table, code = spreadsheet(pl.read_csv(r'pages/sub_026 HRV Temperature Respiratory At Sleep.csv', encoding="ISO-8859-1"))
 
     st.write(table)
     st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example Summary Of HRV Temperature Respiratory At Sleep file'):
-    table, code = spreadsheet(r'pages/Summary Of HRV Temperature Respiratory At Sleep.csv')
+    table, code = spreadsheet(pl.read_csv(r'pages/Summary Of HRV Temperature Respiratory At Sleep.csv', encoding="ISO-8859-1"))
 
     st.write(table)
     st.code(code, language='python', line_numbers=True)

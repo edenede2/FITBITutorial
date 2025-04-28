@@ -37,5 +37,24 @@ In the app, you can modify several parameters:
 1. Include \ omit not in Israel and dst (daylight saving time) dates, the default is to omit.
             
 2. Window size (to how many days the cosinor data is fitted each time, default is 24 hours).
+   
+3. Window overlap (default is 24 hours).
+
+4. Downsampleing rate (default is 5 minutes).
+
+5. Missing data threshold total of missing data allowed per day (default is 37%).
             
+6. Largest missing data gap allowed per window (default is 37%).
+            
+7. Data interpolation method (default is no interpolation).
+            
+
+You can always start with default settings and then modify them according to your project.
+            
+
+<b>Analusis Steps:</b>
+            
+1. Load the 1-minute resolution file.
+            
+
             """, unsafe_allow_html=True)

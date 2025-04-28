@@ -924,13 +924,13 @@ if __name__ == '__main__':
     )
 
 with st.expander('Example subject HRV Temperature Respiratory At Sleep file'):
-    table, code = spreadsheet(pl.read_csv(r'pages/sub_026 HRV Temperature Respiratory At Sleep.csv', encoding="ISO-8859-1"))
+    table, code = spreadsheet(pl.read_csv(r'pages/sub_026 HRV Temperature Respiratory At Sleep.csv', encoding="ISO-8859-1").to_pandas())
 
     st.write(table)
     st.code(code, language='python', line_numbers=True)
 
 with st.expander('Example Summary Of HRV Temperature Respiratory At Sleep file'):
-    table, code = spreadsheet(pl.read_csv(r'pages/Summary Of HRV Temperature Respiratory At Sleep.csv', encoding="ISO-8859-1"))
+    table, code = spreadsheet(pl.read_csv(r'pages/Summary Of HRV Temperature Respiratory At Sleep.csv', encoding="ISO-8859-1").to_pandas())
 
     st.write(table)
     st.code(code, language='python', line_numbers=True)
@@ -1022,8 +1022,8 @@ if show_results:
 
     for i in range(len(result_df)):
         with st.container(border=True):
-            st.subheader(f"Feature: {result_df["Feature"][i]}")
-            st.write(f"File: {result_df["File"][i]}")
+            st.subheader(f"Feature: {result_df['Feature'][i]}")
+            st.write(f"File: {result_df['File'][i]}")
             if result_df["Type"][i] == None:
                 results_type = " "
             else:
